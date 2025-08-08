@@ -15,10 +15,12 @@
      	<a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 
 	<a-plane position="0 0 0" rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
-	<a-cylinder click-drag position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+	<a-cylinder click-drag position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"
+		event-set__1="_event: dragstart; material.opacity: 0.2"
+        event-set__1="_event: dragend; material.opacity: 1"></a-cylinder>
 	
 	<!-- Camera -->
-	<a-entity position="0 0 3"><a-camera look-controls="false"></a-camera></a-entity>     
+	<a-entity position="0 0 3"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
      	</a-scene>
 </body>
 	<script>
@@ -31,6 +33,7 @@ function funcion_play()
 }
 	</script>
 </html>
+
 
 
 
