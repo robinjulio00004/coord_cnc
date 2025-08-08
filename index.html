@@ -7,24 +7,16 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
-	<link rel="stylesheet" href="styles.css">
+		<script src="click_drag_component.js"></script>
+	<!--<link rel="stylesheet" href="styles.css">-->
 	</head>
 <body style="margin : 0px; overflow: hidden;">
-	<div class="buttons">
- 	 <button id="boton" class="button" type="button" onclick="funcion_play()">Reproducir</button>
-	</div>
 	<!-- Scene. -->
      	<a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
-	<a-assets> <!-- Asset management system. -->
-    	<video id="evideo" autoplay preload="auto" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
-		<!-- HEVC video for safari support -->
-        <source src="video_cel.mov" type="video/mp4;codecs=hvc1">
-          	<!-- WEBM video for chrome and firefox -->
-        <source src="video_cel.webm" type="video/webm" />
-	</video>
-  	</a-assets>
-	<!--<a-plane position="0 0 0" rotation="0 0 0" width="2" height="2" color="#FFC65D"></a-plane>-->
-	<a-video src="#evideo" scale="1 1 1" width="3" height="1.5"></a-video>
+
+	<a-plane position="0 0 0" rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
+	<a-cylinder click-drag position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+	
 	<!-- Camera -->
 	<a-entity position="0 0 3"><a-camera look-controls="false"></a-camera></a-entity>     
      	</a-scene>
@@ -39,6 +31,7 @@ function funcion_play()
 }
 	</script>
 </html>
+
 
 
 
