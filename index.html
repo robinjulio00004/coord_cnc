@@ -7,11 +7,11 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
-		<script src="gamepad-controls.js"></script>
+		<script src="joystick.js"></script>
 	</head>
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Scene. -->
-     	<a-scene>
+     	<a-scene joystick>
 			
 	<!-- Camera -->
 	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
@@ -21,17 +21,18 @@
       <a-plane rotation="-90 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
 
      <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-
-			<a-entity id="rig"
+<a-entity camera id="camera" position="0 1.6 0" look-controls wasd-controls>
+			<!--<a-entity id="rig"
           movement-controls="controls: gamepad,keyboard,nipple"
           nipple-controls="mode: static">
   <a-entity camera
             position="0 0 3.8"
             look-controls="pointerLockEnabled: true">
-  </a-entity>
+  </a-entity>-->
 </a-entity>
 </body>
 </html>
+
 
 
 
