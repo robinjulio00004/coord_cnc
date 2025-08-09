@@ -7,8 +7,10 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
-		<!--<script src="click_drag_component3.js"></script>-->
-		<script src="https://jesstelford.github.io/aframe-click-drag-component/build.js"></script>
+		<script src="click_drag_component.js"></script>
+		<script>
+    		registerAframeClickDragComponent(window.AFRAME);
+  		</script>
 	<!--<link rel="stylesheet" href="styles.css">-->
 	</head>
 <body style="margin : 0px; overflow: hidden;">
@@ -39,6 +41,7 @@
      	</a-scene>
 </body>
 </html>
+
 
 
 
