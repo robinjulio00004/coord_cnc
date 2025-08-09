@@ -12,7 +12,8 @@
     		registerAframeClickDragComponent(window.AFRAME);
   		</script>
 	<!--<link rel="stylesheet" href="styles.css">-->
-	    <script src="https://unpkg.com/aframe-click-drag-component"></script>
+	    <!--<script src="https://unpkg.com/aframe-click-drag-component"></script>-->
+		<script src="https://jesstelford.github.io/aframe-click-drag-component/build.js"></script>
   <script>
     registerAframeClickDragComponent(window.AFRAME);
   </script>
@@ -21,7 +22,7 @@
 	<!-- Scene. -->
      	<a-scene embedded arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: true">
 			
-	<a-sphere click-drag position="0 0.75 1" radius="0.5" color="#EF2D5E"></a-sphere>
+	<!--<a-sphere click-drag position="0 0.75 1" radius="0.5" color="#EF2D5E"></a-sphere>
 	<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>
 	<!--<a-cylinder click-drag position="0 0.75 1" rotation="-90 0 0" radius="0.5" height="1.5" color="#FFC65D"
 		event-set__1="_event: dragstart; material.opacity: 0.2"
@@ -32,10 +33,18 @@
 		
 	
 	<!-- Camera -->
-	<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
-     	</a-scene>
+	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
+     	</a-scene>-->
+	<a-sphere click-drag position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+      
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+      <a-entity position="0 0 3.8">
+        <a-camera look-controls-enabled="false"></a-camera>
+      </a-entity>
 </body>
 </html>
+
 
 
 
