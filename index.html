@@ -7,6 +7,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
+		<link rel="stylesheet" href="styles.css">
 
 	<script>
 		
@@ -21,13 +22,18 @@
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
       });
-		
+	document.querySelector('#msg1').innerHTML=(evt.touches[0].clientX-window.innerWidth/2)*scale;
+	document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
 	</script>
 		
 	</head>
 <body style="margin : 0px; overflow: hidden;">
+	<!-- Valores de salida -->
+	<div class="fmsg">
+ 	 <div id="msg1"></div>
+	 <div id="msg2"></div>
+	</div>
 	<!-- Scene -->
-    
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 	<!-- Asset Management -->	
 	<a-assets>
@@ -45,6 +51,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
