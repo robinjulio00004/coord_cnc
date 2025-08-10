@@ -1,18 +1,11 @@
-   @media (orientation: landscape) {
+   @media screen and (orientation: landscape) {
       body {
          margin:0px;
          flex-direction: row; /* Example: arrange content horizontally */
+         width:100vw;
+         height:100vh;
         /* Rotate the content container */
-        transform: rotate(-90deg);
-        transform-origin: left top;
-         top: 100%;
-         left: 0;
-        /* Set content width to viewport height */
-        width: 100vh;
-        /* Set content height to viewport width */
-        height: 100vw;
-        /*overflow-x: hidden;*/
-         overflow:hidden;
+        transform: rotate(90deg);
         position: absolute;
 
       }
@@ -48,6 +41,7 @@
       height: 1em;
 
 }
+
 
 
 
