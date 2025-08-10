@@ -22,12 +22,12 @@
 			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-			const xt =evt.touches[0].clientX-window.innerWidth/2 ;
-			const yt =window.innerHeight/2-evt.touches[0].clientY;
-			xt=xt.toFixed(2);
-			yt=yt.toFixed(2);
-			touchXElement.textContent = xt*scale; // X-coordinate relative to viewport
-    		touchYElement.textContent = yt*scale; // Y-coordinate relative to viewport
+			//const xt =evt.touches[0].clientX-window.innerWidth/2 ;
+			//const yt =window.innerHeight/2-evt.touches[0].clientY;
+			//xt=xt.toFixed(2);
+			//yt=yt.toFixed(2);
+			touchXElement.textContent =(evt.touches[0].clientX-window.innerWidth/2)*scale; // X-coordinate relative to viewport
+    		touchYElement.textContent = (window.innerHeight/2-evt.touches[0].clientY)*scale; // Y-coordinate relative to viewport
     
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
@@ -37,7 +37,7 @@
 		
 	</head>
 <body>
-	<img  id="img" src="coord_sist.png" width="3" height="1.5"/>
+	<img src="coord_sist.png" width="3" height="1.5"/>
 	<!-- Valores de salida -->
 	<div class="fmsg">
  	 <div id="msg1">
@@ -65,6 +65,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
