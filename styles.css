@@ -4,9 +4,7 @@ body{
   height:100vh;
   overflow:hidden;
 }
-#img{
-  transform: rotate(90deg);
-}
+
 .fmsg {
       position: absolute;
       bottom: 10;
@@ -30,6 +28,7 @@ body{
       width: 5em;
       height: 1em;
 }
+
 
 
 
