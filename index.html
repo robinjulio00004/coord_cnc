@@ -23,8 +23,8 @@
           //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-			touchXElement.textContent = evt.touches[0].clientX.toFixed(2); // X-coordinate relative to viewport
-    		touchYElement.textContent = evt.touches[0].clientY.toFixed(2); // Y-coordinate relative to viewport
+			touchXElement.textContent = parseInt(evt.touches[0].clientX.toFixed(2)); // X-coordinate relative to viewport
+    		touchYElement.textContent = parseInt(evt.touches[0].clientY.toFixed(2)); // Y-coordinate relative to viewport
     
           const scale = 0.006;
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
@@ -39,12 +39,10 @@
 	<div class="fmsg">
  	 <div id="msg1">
 	<p>Touch X: <span id="touch-x"> </span></p>
-  	
-	 </div>
 	 <div id="msg2">
 	<p>Touch Y: <span id="touch-y"> </span></p>
 	 </div>
-	</div>
+		 
 	<!-- Scene -->
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 	<!-- Asset Management -->	
@@ -67,6 +65,7 @@
 	//document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
 	</script>
 </html>
+
 
 
 
