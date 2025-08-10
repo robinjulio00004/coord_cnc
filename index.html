@@ -21,12 +21,12 @@
 
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
           //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
+			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-			touchXElement.textContent = parseInt(evt.touches[0].clientX.toFixed(2)); // X-coordinate relative to viewport
-    		touchYElement.textContent = parseInt(evt.touches[0].clientY.toFixed(2)); // Y-coordinate relative to viewport
+			touchXElement.textContent = (evt.touches[0].clientX-window.innerWidth/2)*scale; // X-coordinate relative to viewport
+    		touchYElement.textContent =  (window.innerHeight/2-evt.touches[0].clientY)*scale; // Y-coordinate relative to viewport
     
-          const scale = 0.006;
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
       });
@@ -67,6 +67,7 @@
 	//document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
 	</script>
 </html>
+
 
 
 
