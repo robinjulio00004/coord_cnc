@@ -7,8 +7,6 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
-		<script src="joystick.js"></script>
-		<script src="gestures.js"></script>
 	</head>
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Scene. -->
@@ -20,9 +18,9 @@
     </a-asset-item>
   </a-assets>
 		
-	<a-entity id="bowser-model" gltf-model="#bowser" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" 
+	<!--<a-entity id="bowser-model" gltf-model="#bowser" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" 
 		gesture-handler="minScale: 0.50; maxScale: 0.50">
-    </a-entity>
+    </a-entity>-->
 	<!-- Camera -->
 	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
      	</a-scene>-->
@@ -30,9 +28,10 @@
 				<a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
 			</a-entity>-->
     <a-plane rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
+	<a-box position="0 0 1" color="red" touch-move></a-box>
 
      <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-<a-entity camera id="camera" position="0 0 6" look-controls-enabled="true">
+	<a-entity camera id="camera" position="0 0 6" look-controls-enabled="true">
 			<!--<a-entity id="rig"
           movement-controls="controls: gamepad,keyboard,nipple"
           nipple-controls="mode: static">
@@ -42,7 +41,58 @@
   </a-entity>-->
 </a-entity>
 </body>
+	<script>
+		AFRAME.registerComponent('touch-move', {
+  init: function () {
+    this.isDragging = false;
+    this.previousTouch = new THREE.Vector2();
+	//this.previousPosition=new THREE.Vector2();
+    this.el.addEventListener('touchstart', this.onTouchStart.bind(this));
+    this.el.addEventListener('touchmove', this.onTouchMove.bind(this));
+    this.el.addEventListener('touchend', this.onTouchEnd.bind(this));
+  },
+
+  onTouchStart: function (evt) {
+    if (evt.touches.length === 1) { // Only handle single-finger drag
+      this.isDragging = true;
+      this.previousTouch.set(evt.touches[0].clientX, evt.touches[0].clientY);
+    }
+  },
+
+  onTouchMove: function (evt) {
+	//if (!this.isDragging)return;
+    if (this.isDragging && evt.touches.length === 1) {
+      const currentTouch = new THREE.Vector2(evt.touches[0].clientX, evt.touches[0].clientY);
+		//const currentX =evt.touches[0].clientX;
+		//const currentY =evt.touches[0].clientY;
+		//const deltaX = currentX - this.previousPosition.x;
+		//const deltaY = currentY - this.previousPosition.y;
+      const deltaX = currentTouch.x - this.previousTouch.x;
+      const deltaY = currentTouch.y - this.previousTouch.y;
+
+      // Convert 2D screen movement to 3D world movement (simplified)
+      // This part would be more complex in a real scenario, considering camera perspective
+      // and potentially raycasting to a plane.
+      const moveScale = 0.01; // Adjust for sensitivity
+		//this.el.object3D.position.x += deltaX * moveScale;
+		//this.el.object3D.position.y += deltaY * moveScale;
+      const newPos = this.el.object3D.position.clone();
+      newPos.x += deltaX * moveScale;
+      newPos.y -= deltaY * moveScale; // Invert Y for screen coordinates
+
+      this.el.object3D.position.copy(newPos);
+      this.previousTouch.copy(currentTouch);
+		//this.previousPosition.set(currentX,currentY);
+    }
+  },
+
+  onTouchEnd: function () {
+    this.isDragging = false;
+  }
+});
+	</script>
 </html>
+
 
 
 
