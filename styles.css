@@ -5,6 +5,13 @@ body{
   overflow:hidden;
 }
 
+@media (orientation: lanscape){/*Default Landscape*/
+a-scene{
+	width: 100vh;
+	height: 100vw;
+
+}  
+
 .fmsg {
       position: absolute;
       bottom: 10;
@@ -26,4 +33,5 @@ body{
       color: blue;
       width: 5em;
       height: 1em;
+
 }
