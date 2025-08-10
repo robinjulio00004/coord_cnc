@@ -18,7 +18,7 @@
           //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
   
           const scale = 0.006;
-          this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0.25});
+          this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: -1});
         },
       });
 		
@@ -36,7 +36,7 @@
   </a-assets>
 		
 	<a-entity gltf-model="#bowser" position="0 0 0" rotation="90 0 0" scale="0.05 0.05 0.05" touch-move></a-entity>
-	<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>
+	<!--<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>-->
 		
 	<!-- Camera -->
 	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
@@ -44,6 +44,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
