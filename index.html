@@ -1,5 +1,5 @@
 <!doctype html>
-<!--video en Realidad Aumentada-->
+<!--touch en Realidad Aumentada-->
 <html lang="en-US">
 	<head>
 	<meta charset="utf-8"/> 
@@ -7,41 +7,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
-	</head>
-<body style="margin : 0px; overflow: hidden;">
-	<!-- Scene. -->
-     	<!--<a-scene joystick vr-mode-ui="enabled: false">-->
-	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
-			
-		<a-assets>
-    <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
-    </a-asset-item>
-  </a-assets>
-		
-	<!--<a-entity id="bowser-model" gltf-model="#bowser" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" 
-		gesture-handler="minScale: 0.50; maxScale: 0.50">
-    </a-entity>-->
-	<!-- Camera -->
-	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
-     	</a-scene>-->
-			<!--<a-entity wasd-controls>
-				<a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
-			</a-entity>-->
-    <a-plane rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
-	<a-box position="0 0 1" color="red" touch-move></a-box>
 
-     <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-	<a-entity camera id="camera" position="0 0 6" look-controls-enabled="true">
-			<!--<a-entity id="rig"
-          movement-controls="controls: gamepad,keyboard,nipple"
-          nipple-controls="mode: static">
-  <a-entity camera
-            position="0 0 3.8"
-            look-controls="pointerLockEnabled: true">
-  </a-entity>-->
-</a-entity>
-</body>
-	<script>
+			<script>
 		AFRAME.registerComponent('touch-move', {
   init: function () {
     this.isDragging = false;
@@ -91,7 +58,43 @@
   }
 });
 	</script>
+		
+	</head>
+<body style="margin : 0px; overflow: hidden;">
+	<!-- Scene. -->
+     	<!--<a-scene joystick vr-mode-ui="enabled: false">-->
+	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
+			
+		<a-assets>
+    <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
+    </a-asset-item>
+  </a-assets>
+		
+	<!--<a-entity id="bowser-model" gltf-model="#bowser" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" 
+		gesture-handler="minScale: 0.50; maxScale: 0.50">
+    </a-entity>-->
+	<!-- Camera -->
+	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
+     	</a-scene>-->
+			<!--<a-entity wasd-controls>
+				<a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
+			</a-entity>-->
+    <a-plane rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
+	<a-box position="0 0 1" color="red" touch-move></a-box>
+
+     <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
+	<a-entity camera id="camera" position="0 0 6" look-controls-enabled="true">
+			<!--<a-entity id="rig"
+          movement-controls="controls: gamepad,keyboard,nipple"
+          nipple-controls="mode: static">
+  <a-entity camera
+            position="0 0 3.8"
+            look-controls="pointerLockEnabled: true">
+  </a-entity>-->
+</a-entity>
+</body>
 </html>
+
 
 
 
