@@ -11,8 +11,6 @@
 		<link rel="stylesheet" href="styles.css">
 
 	<script>
-		//screen.orientation.lock('landscape');
-		//screen.lockOrientation('landscape-primary');
 		       AFRAME.registerComponent('touch-move', {
         init: function () {
           this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -24,8 +22,12 @@
 			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-			touchXElement.textContent = parseInt((evt.touches[0].clientX-window.innerWidth/2)*scale); // X-coordinate relative to viewport
-    		touchYElement.textContent = parseInt((window.innerHeight/2-evt.touches[0].clientY)*scale); // Y-coordinate relative to viewport
+			const xt =evt.touches[0].clientX-window.innerWidth/2) ;
+			const yt =window.innerHeight/2-evt.touches[0].clientY);
+			xt=xt.toFixed(2);
+			yt=yt.toFixed(2);
+			touchXElement.textContent = xt*scale; // X-coordinate relative to viewport
+    		touchYElement.textContent = yt*scale; // Y-coordinate relative to viewport
     
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
@@ -35,6 +37,7 @@
 		
 	</head>
 <body>
+	<img  id="img" src="coord_sist.png" width="3" height="1.5"/>
 	<!-- Valores de salida -->
 	<div class="fmsg">
  	 <div id="msg1">
@@ -50,10 +53,9 @@
 	<!-- Asset Management -->	
 	<a-assets>
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb"></a-asset-item>
-	<img id="img" src="coord_sist.png">
   	</a-assets>
 
-	<a-image src="#img" width="3" height="1.5"></a-image>
+	
 	<a-entity gltf-model="#bowser" position="0 0 0" rotation="90 -90 0" scale="0.025 0.025 0.025" touch-move></a-entity>
 	<!--<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>-->
 		
@@ -63,6 +65,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
