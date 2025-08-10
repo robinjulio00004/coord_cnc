@@ -1,16 +1,25 @@
+   @media screen and (orientation: landscape) {
+      html {
+        /* Rotate the content container */
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        /* Set content width to viewport height */
+        width: 100vh;
+        /* Set content height to viewport width */
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+    } 
+
 body{
   margin:0px;
   width:100vw;
   height:100vh;
   overflow:hidden;
 }
-
-@media (orientation: lanscape){/*Default Landscape*/
-a-scene{
-	width: 100vh;
-	height: 100vw;
-
-}  
 
 .fmsg {
       position: absolute;
@@ -35,3 +44,4 @@ a-scene{
       height: 1em;
 
 }
+
