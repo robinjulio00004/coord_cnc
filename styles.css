@@ -4,6 +4,8 @@
         /* Rotate the content container */
         transform: rotate(-90deg);
         transform-origin: left top;
+         top: 100%;
+         left: 0;
         /* Set content width to viewport height */
         width: 100vh;
         /* Set content height to viewport width */
@@ -11,8 +13,7 @@
         /*overflow-x: hidden;*/
          overflow:hidden;
         position: absolute;
-        top: 100%;
-        left: 0;
+
       }
     } 
 
@@ -46,6 +47,7 @@
       height: 1em;
 
 }
+
 
 
 
