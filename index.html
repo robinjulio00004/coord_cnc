@@ -8,55 +8,20 @@
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
 
-			<script>
-		AFRAME.registerComponent('touch-move', {
-  init: function () {
-    this.isDragging = false;
-    this.previousTouch = new THREE.Vector2(0,0);
-	//this.previousPosition=new THREE.Vector2();
-    this.el.addEventListener('touchstart', this.onTouchStart.bind(this));
-    this.el.addEventListener('touchmove', this.onTouchMove.bind(this));
-    this.el.addEventListener('touchend', this.onTouchEnd.bind(this));
-  },
-
-  onTouchStart: function (evt) {
-    if (evt.touches.length === 1) { // Only handle single-finger drag
-      this.isDragging = true;
-      this.previousTouch.set(evt.touches[0].clientX, evt.touches[0].clientY);
-    }
-  },
-
-  onTouchMove: function (evt) {
-	//if (!this.isDragging)return;
-    if (this.isDragging && evt.touches.length === 1) {
-      const currentTouch = new THREE.Vector2(evt.touches[0].clientX, evt.touches[0].clientY);
-		//const currentX =evt.touches[0].clientX;
-		//const currentY =evt.touches[0].clientY;
-		//const deltaX = currentX - this.previousPosition.x;
-		//const deltaY = currentY - this.previousPosition.y;
-      const deltaX = currentTouch.x - this.previousTouch.x;
-      const deltaY = currentTouch.y - this.previousTouch.y;
-
-      // Convert 2D screen movement to 3D world movement (simplified)
-      // This part would be more complex in a real scenario, considering camera perspective
-      // and potentially raycasting to a plane.
-      const moveScale = 0.5; // Adjust for sensitivity
-		//this.el.object3D.position.x += deltaX * moveScale;
-		//this.el.object3D.position.y += deltaY * moveScale;
-      const newPos = this.el.object3D.position.clone();
-      newPos.x += deltaX * moveScale;
-      newPos.y -= deltaY * moveScale; // Invert Y for screen coordinates
-
-      this.el.object3D.position.copy(newPos);
-      this.previousTouch.copy(currentTouch);
-		//this.previousPosition.set(currentX,currentY);
-    }
-  },
-
-  onTouchEnd: function () {
-    this.isDragging = false;
-  }
-});
+	<script>
+		
+		       AFRAME.registerComponent('touch-move', {
+        init: function () {
+          this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
+        },
+        onTouchMove: function (evt) {
+          //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
+  
+          const scale = 0.015;
+          this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0.5});
+        },
+      });
+		
 	</script>
 		
 	</head>
@@ -65,12 +30,13 @@
     
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
 			
-		<a-assets>
+	<a-assets>
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
     </a-asset-item>
   </a-assets>
 		
 	<a-entity gltf-model="#bowser" position="90 0 0" scale="0.05 0.05 0.05" touch-move></a-entity>
+	<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>
 		
 	<!-- Camera -->
 	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
@@ -78,6 +44,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
