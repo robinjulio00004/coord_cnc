@@ -24,8 +24,8 @@
 			//const yt =window.innerHeight/2-evt.touches[0].clientY;
 			//xt=xt.toFixed(2);
 			//yt=yt.toFixed(2);
-			touchXElement.textContent =(evt.touches[0].clientX-window.innerWidth/2)*scale; // X-coordinate relative to viewport
-    		touchYElement.textContent = (window.innerHeight/2-evt.touches[0].clientY)*scale; // Y-coordinate relative to viewport
+			touchXElement.textContent =(evt.touches[0].clientX.toFixed(1)-window.innerWidth/2)*scale; // X-coordinate relative to viewport
+    		touchYElement.textContent = (window.innerHeight/2-evt.touches[0].clientY.toFixed(1))*scale; // Y-coordinate relative to viewport
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
       });
@@ -60,6 +60,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
