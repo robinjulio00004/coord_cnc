@@ -19,7 +19,11 @@
 
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
           //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
-  
+  			const touchXElement = document.getElementById('touch-x');
+  			const touchYElement = document.getElementById('touch-y');
+			touchXElement.textContent = evt.touches[0].clientX.toFixed(2); // X-coordinate relative to viewport
+    		touchYElement.textContent = evt.touches[0].clientY.toFixed(2); // Y-coordinate relative to viewport
+    
           const scale = 0.006;
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
@@ -31,7 +35,10 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Valores de salida -->
 	<div class="fmsg">
- 	 <div id="msg1"></div>
+ 	 <div id="msg1">
+	<p>Touch X: <span id="touch-x">N/A</span></p>
+  	<p>Touch Y: <span id="touch-y">N/A</span></p>
+	 </div>
 	 <div id="msg2"></div>
 	</div>
 	<!-- Scene -->
@@ -56,6 +63,7 @@
 	document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
 	</script>
 </html>
+
 
 
 
