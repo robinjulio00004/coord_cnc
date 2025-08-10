@@ -24,8 +24,8 @@
 			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-			touchXElement.textContent = (evt.touches[0].clientX-window.innerWidth/2)*scale; // X-coordinate relative to viewport
-    		touchYElement.textContent =  (window.innerHeight/2-evt.touches[0].clientY)*scale; // Y-coordinate relative to viewport
+			touchXElement.textContent = (evt.touches[0].clientX.toFixed(2)-window.innerWidth/2)*scale; // X-coordinate relative to viewport
+    		touchYElement.textContent =  (window.innerHeight/2-evt.touches[0].clientY.toFixe(2))*scale; // Y-coordinate relative to viewport
     
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
@@ -54,7 +54,7 @@
   	</a-assets>
 
 	<a-image src="#img" width="3" height="1.5"></a-image>
-	<a-entity gltf-model="#bowser" position="0 0 0" rotation="90 90 0" scale="0.025 0.025 0.025" touch-move></a-entity>
+	<a-entity gltf-model="#bowser" position="0 0 0" rotation="180 0 0" scale="0.025 0.025 0.025" touch-move></a-entity>
 	<!--<a-plane position="0 0 0" rotation="0 0 0" width="3" height="3" color="#7BC8A4"></a-plane>-->
 		
 	<!-- Camera -->
@@ -62,83 +62,4 @@
 		
 </a-scene>
 </body>
-	<script>
-	//document.querySelector('#msg1').innerHTML=(evt.touches[0].clientX-window.innerWidth/2)*scale;
-	//document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
-	</script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
