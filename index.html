@@ -12,7 +12,7 @@
 		AFRAME.registerComponent('touch-move', {
   init: function () {
     this.isDragging = false;
-    this.previousTouch = new THREE.Vector2();
+    this.previousTouch = new THREE.Vector2(0,0);
 	//this.previousPosition=new THREE.Vector2();
     this.el.addEventListener('touchstart', this.onTouchStart.bind(this));
     this.el.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -40,7 +40,7 @@
       // Convert 2D screen movement to 3D world movement (simplified)
       // This part would be more complex in a real scenario, considering camera perspective
       // and potentially raycasting to a plane.
-      const moveScale = 0.01; // Adjust for sensitivity
+      const moveScale = 0.5; // Adjust for sensitivity
 		//this.el.object3D.position.x += deltaX * moveScale;
 		//this.el.object3D.position.y += deltaY * moveScale;
       const newPos = this.el.object3D.position.clone();
@@ -63,7 +63,7 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Scene. -->
      	<!--<a-scene joystick vr-mode-ui="enabled: false">-->
-	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: true">
+	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
 			
 		<a-assets>
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
@@ -80,17 +80,17 @@
 				<a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
 			</a-entity>-->
 
-		<a-entity id="myObject" geometry="primitive: box" material="color: red"
-          position="0 0 0"
+		<a-entity geometry="primitive: box" material="color: red"
+          position="0.5 0 0"
           touch-move></a-entity>
 		
     <a-plane rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
 		<a-entity touch-move>
-			<a-box position="0 0 1" color="red" ></a-box>
+			<a-box position="-0.5 0 1" color="red" ></a-box>
 		</a-entity>
 
      <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-	<a-entity camera id="camera" position="0 0 6" look-controls-enabled="false">
+	<a-entity camera position="0 0 6"> //look-controls-enabled="false">
 			<!--<a-entity id="rig"
           movement-controls="controls: gamepad,keyboard,nipple"
           nipple-controls="mode: static">
@@ -101,6 +101,7 @@
 </a-entity>
 </body>
 </html>
+
 
 
 
