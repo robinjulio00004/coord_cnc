@@ -20,8 +20,11 @@
 			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-					var xt = (evt.touches[0].clientX.toFixed(1)-window.innerWidth/2)*scale;
-					var yt = (window.innerHeight/2-evt.touches[0].clientY.toFixed(1))*scale;
+					var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
+					var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
+					xt=xt.toFixed(2);
+					yt=yt.toFixed(2);
+					
 			//const xt =evt.touches[0].clientX-window.innerWidth/2 ;
 			//const yt =window.innerHeight/2-evt.touches[0].clientY;
 			//xt=xt.toFixed(2);
@@ -54,7 +57,7 @@
   	</a-assets>
 
 	<a-image src="#img" width="3" height="1.5" rotation="0 0 -90"></a-image>
-	<a-entity gltf-model="#bowser" position="0 0 0" rotation="90 180 -90" scale="0.025 0.025 0.025" touch-move></a-entity>
+	<a-entity gltf-model="#bowser" position="0 0 0" rotation="0 0 -90" scale="0.025 0.025 0.025" touch-move></a-entity>
 		
 	<!-- Camera -->
 	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
@@ -62,6 +65,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
