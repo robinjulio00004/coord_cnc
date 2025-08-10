@@ -17,7 +17,7 @@
         onTouchMove: function (evt) {
           //console.log('Touch coordinates:', evt.touches[0].clientX, evt.touches[0].clientY);
   
-          const scale = 0.005;
+          const scale = 0.01;
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0.5});
         },
       });
@@ -44,6 +44,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
