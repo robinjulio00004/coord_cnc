@@ -22,8 +22,7 @@
           this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
         },
       });
-	document.querySelector('#msg1').innerHTML=(evt.touches[0].clientX-window.innerWidth/2)*scale;
-	document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
+
 	</script>
 		
 	</head>
@@ -50,7 +49,12 @@
 		
 </a-scene>
 </body>
+	<script>
+	document.querySelector('#msg1').innerHTML=(evt.touches[0].clientX-window.innerWidth/2)*scale;
+	document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
+	</script>
 </html>
+
 
 
 
