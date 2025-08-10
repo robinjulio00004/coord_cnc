@@ -33,7 +33,6 @@
 		
 	</head>
 <body>
-	<img src="coord_sist.png" width="3" height="1.5"/>
 	<!-- Valores de salida -->
 	<div class="fmsg">
  	 <div id="msg1">
@@ -48,9 +47,11 @@
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 	<!-- Asset Management -->	
 	<a-assets>
+	<img id="img" src="coord_sist.png">
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb"></a-asset-item>
   	</a-assets>
 
+	<a-image src="#img" width="3" height="1.5"rotation="0 90 0"></a-image>
 	<a-entity gltf-model="#bowser" position="0 0 0" rotation="90 0 0" scale="0.025 0.025 0.025" touch-move></a-entity>
 		
 	<!-- Camera -->
@@ -59,6 +60,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
