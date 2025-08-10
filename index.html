@@ -11,8 +11,8 @@
 		<link rel="stylesheet" href="styles.css">
 
 	<script>
-		screen.orientation.lock('landscape');
-		//screen.lockOrientation('landscape-primary');
+		//screen.orientation.lock('landscape');
+		screen.lockOrientation('landscape-primary');
 		       AFRAME.registerComponent('touch-move', {
         init: function () {
           this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -65,6 +65,7 @@
 	document.querySelector('#msg2').innerHTML=(window.innerHeight/2-evt.touches[0].clientY)*scale;
 	</script>
 </html>
+
 
 
 
