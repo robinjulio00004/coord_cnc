@@ -62,46 +62,23 @@
 	</head>
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Scene. -->
-     	<!--<a-scene joystick vr-mode-ui="enabled: false">-->
-	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" touch-move>
+    
+	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
 			
 		<a-assets>
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
     </a-asset-item>
   </a-assets>
 		
-	<!--<a-entity id="bowser-model" gltf-model="#bowser" position="0 0 0" scale="0.05 0.05 0.05" class="clickable" 
-		gesture-handler="minScale: 0.50; maxScale: 0.50">
-    </a-entity>-->
-	<!-- Camera -->
-	<!--<a-entity position="0 -1 8"><a-camera look-controls-enabled="false"></a-camera></a-entity>     
-     	</a-scene>-->
-			<!--<a-entity wasd-controls>
-				<a-sphere position="0 0 0" radius="0.5" color="#EF2D5E"></a-sphere>
-			</a-entity>-->
-
-		<a-entity geometry="primitive: box" material="color: red"
-          position="0.5 0 0"
-          touch-move></a-entity>
+	<a-entity gltf-model="#bowser" position="90 0 0" scale="0.05 0.05 0.05" touch-move></a-entity>
 		
-    <a-plane rotation="0 0 0" width="2" height="2" color="#7BC8A4"></a-plane>
-		<a-entity touch-move>
-			<a-box position="-0.5 0 1" color="red" ></a-box>
-		</a-entity>
-
-     <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-	<a-entity camera position="0 0 6"> <!--look-controls-enabled="false">-->
-			<!--<a-entity id="rig"
-          movement-controls="controls: gamepad,keyboard,nipple"
-          nipple-controls="mode: static">
-  <a-entity camera
-            position="0 0 3.8"
-            look-controls="pointerLockEnabled: true">
-  </a-entity>-->
-</a-entity>
+	<!-- Camera -->
+	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
+		
 </a-scene>
 </body>
 </html>
+
 
 
 
