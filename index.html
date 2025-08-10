@@ -63,7 +63,7 @@
 <body style="margin : 0px; overflow: hidden;">
 	<!-- Scene. -->
      	<!--<a-scene joystick vr-mode-ui="enabled: false">-->
-	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
+	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" touch-move>
 			
 		<a-assets>
     <a-asset-item id="bowser" src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb">
@@ -90,7 +90,7 @@
 		</a-entity>
 
      <!-- <a-entity gamepad-controls position="0 0 3.8"><a-camera look-controls-enabled="false"></a-camera></a-entity>-->
-	<a-entity camera position="0 0 6"> //look-controls-enabled="false">
+	<a-entity camera position="0 0 6"> <!--look-controls-enabled="false">-->
 			<!--<a-entity id="rig"
           movement-controls="controls: gamepad,keyboard,nipple"
           nipple-controls="mode: static">
@@ -102,6 +102,7 @@
 </a-scene>
 </body>
 </html>
+
 
 
 
