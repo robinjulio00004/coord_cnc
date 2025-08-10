@@ -1,6 +1,7 @@
    @media (orientation: landscape) {
       body {
          margin:0px;
+         flex-direction: row; /* Example: arrange content horizontally */
         /* Rotate the content container */
         transform: rotate(-90deg);
         transform-origin: left top;
@@ -47,6 +48,7 @@
       height: 1em;
 
 }
+
 
 
 
