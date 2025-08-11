@@ -68,11 +68,13 @@
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
 	<!-- Asset Management -->	
 	<a-assets>
-	<img id="img" src="coord_sist.png">
+	<img id="img1" src="coord_sist.png">
+	<img id="img2" src="cero_pieza.png">
     <a-asset-item id="tool" src="cortador.glb"></a-asset-item>
   	</a-assets>
 
-	<a-image src="#img" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
+	<a-image src="#img1" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
+	<a-image src="#img2" position="0 0.5 0" rotation="0 0 -90" width="1" height="1"></a-image>
 	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move></a-entity>
 		
 	<!-- Camera -->
@@ -81,6 +83,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
