@@ -49,14 +49,13 @@
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			document.getElementById('touch-x1').textContent = true; // touch detect
-			/*const stexto = " ";
-			const lineas =document.getElementById('clinea');
-			
-				/*for (int i = 1; i <= 5; i++) 
+			var stexto = "";
+					
+				for (var i = 1; i <= 5; i++) 
 				{
-  					stexto += 'linea ${i}.\n'; // texto en for
-				}*/
-			/*lineas.textContent = stexto; // ingresar líneas de código*/
+  					stexto += 'linea ${i}.\n';
+				}
+			document.getElementById('clinea').textContent = stexto; // ingresar líneas de código
 		},
       });
 	</script>
@@ -75,7 +74,7 @@
  	 <div id="mcode">
 	<p>% <br>;Plantilla de programa para códico G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
 	<p>Touch detect: <span id="touch-x1"> </span><br></p>
-	<!--<p>N<span id="clinea"></span><br></p>-->
+	<p>N<span id="clinea"></span><br></p>
 	<p>N50 M30 </span></p>
 	 </div>
 		 
@@ -98,6 +97,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
