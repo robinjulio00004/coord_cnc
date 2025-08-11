@@ -50,14 +50,12 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			document.getElementById('touch-x1').textContent = true; // touch detect
 			let stexto = "";
-			const lineBreak = document.createElement('br');
-				for (let i = 1; i <= 5; i++) 
+				for (var i = 1; i <= 5; i++) 
 				{
   					//stexto += `N0${i*10} \n\n\n\n\n\n\n\n\n\n`;
-					stexto+= "N0" + (i*10) + `\n\n\n\n\n\n\n\n\n\n\n`;
+					stexto+= "N0"+(i*10)+"br";
 				}
-			document.getElementById('clinea').appendChild(lineBreak);
-			document.getElementById('clinea').textContent = stexto; // ingresar líneas de código
+			document.getElementById('clinea').innerHTML = stexto; // ingresar líneas de código
 		},
       });
 	</script>
@@ -99,6 +97,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
