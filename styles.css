@@ -35,6 +35,7 @@ body{
     }*/
 
 #mcode{
+      position: absolute;
       margin:0px;
       top: 0px;
       left: 0px;
@@ -46,8 +47,9 @@ body{
       font-weight: bold;
       text-align: center;
       box-sizing: border-box;
-      z-index: 1;
+      z-index: 9;
 }
+
 
 
 
