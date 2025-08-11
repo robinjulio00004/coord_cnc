@@ -55,7 +55,8 @@
   					//stexto += `N0${i*10} \n\n\n\n\n\n\n\n\n\n`;
 					stexto+= "N0"+(i*10)+"<br>";
 				}
-			document.getElementById('clinea').innerHTML = stexto; // ingresar líneas de código
+					
+			document.getElementById('mcode').append( stexto); // ingresar líneas de código
 		},
       });
 	</script>
@@ -97,6 +98,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
