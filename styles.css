@@ -37,19 +37,19 @@ body{
 
 #mcode{
       margin:0px;
-      top: 5px;
-      left: 5px;
+      top: 0px;
+      left: 0px;
       transform: rotate(90deg);
       color: yellow;
       font-family: sans-serif;
-      font-size: 1em;
+      font-size: 5px;
       border: 1px solid red;
       font-weight: bold;
       text-align: center;
-      background-position: center;
       box-sizing: border-box;
-      z-index: 9;
+      z-index: 1;
 }
+
 
 
 
