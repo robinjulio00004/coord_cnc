@@ -53,7 +53,7 @@
 					
 				for (var i = 1; i <= 5; i++) 
 				{
-  					stexto += 'linea ${i}.\n';
+  					stexto += `Linea de prueba N0${i*10} \n`;
 				}
 			document.getElementById('clinea').textContent = stexto; // ingresar líneas de código
 		},
@@ -74,7 +74,7 @@
  	 <div id="mcode">
 	<p>% <br>;Plantilla de programa para códico G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
 	<p>Touch detect: <span id="touch-x1"> </span><br></p>
-	<p>N<span id="clinea"></span><br></p>
+	<p><span id="clinea"></span></p>
 	<p>N50 M30 </span></p>
 	 </div>
 		 
@@ -97,6 +97,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
