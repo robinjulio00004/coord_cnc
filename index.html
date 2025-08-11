@@ -53,10 +53,10 @@
 					
 				for (var i = 1; i <= 5; i++) 
 				{
-  					//stexto += `N0${i*10} \n`;
-					stexto+= "N0" + (i*10) + "<br>";
+  					stexto += `N0${i*10} \n\n\n\n\n\n\n\n\n\n`;
+					//stexto+= "N0" + (i*10) + "<br>";
 				}
-			document.getElementById('clinea').innerHTML = stexto; // ingresar líneas de código
+			document.getElementById('clinea').textContent = stexto; // ingresar líneas de código
 		},
       });
 	</script>
@@ -75,10 +75,9 @@
  	 <div id="mcode">
 	<p>% <br>;Plantilla de programa para códico G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
 	<p>Touch detect: <span id="touch-x1"></span><br></p>
-	<!--<p><span id="clinea"></span></p>-->
+	<p><span id="clinea"></span></p>
 	<p>N50 M30</p>
 	 </div>
-	<div id="clinea"></div>
 		 
 	<!-- Scene -->
 	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
@@ -99,6 +98,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
