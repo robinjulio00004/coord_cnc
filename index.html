@@ -43,7 +43,7 @@
 					yt=-0.8;
 				}
 			touchXElement.textContent = xt; // X-coordinate relative to viewport
-			touchX1Element.textContent = xt; // X-coordinate relative to viewport
+			/*touchX1Element.textContent = xt; // X-coordinate relative to viewport*/
     		touchYElement.textContent = yt; // Y-coordinate relative to viewport
 				this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
@@ -52,7 +52,6 @@
 			const touchX1Element = document.getElementById('touch-x1');
 			const dtouch=true;
 			touchX1Element.textContent = dtouch; // X-coordinate relative to viewport
-			dtouch=false;
 		},
       });
 	</script>
@@ -93,6 +92,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
