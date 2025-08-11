@@ -20,30 +20,29 @@
 			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
   			const touchYElement = document.getElementById('touch-y');
-					var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
-					var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
-					xt=xt.toFixed(1);
-					yt=yt.toFixed(1);
-					if(xt>1.0)
-					{
-						xt=1.0;
-					}
-					else if(xt<-1.0)
-					{
-						xt=-1.0;
-					}
-					else if(yt>1.8)
-					{
-						yt=1.8;
-					}
-					else if(yt<-0.8)
-					{
-						yt=-0.8;
-					}
+			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
+			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
+				xt=xt.toFixed(1);
+				yt=yt.toFixed(1);
+				if(xt>1.0)
+				{
+					xt=1.0;
+				}
+				else if(xt<-1.0)
+				{
+					xt=-1.0;
+				}
+				else if(yt>1.8)
+				{
+					yt=1.8;
+				}
+				else if(yt<-0.8)
+				{
+					yt=-0.8;
+				}
 			touchXElement.textContent = xt; // X-coordinate relative to viewport
     		touchYElement.textContent = yt; // Y-coordinate relative to viewport
-		this.el.setAttribute('position', {x: xt, y: yt, z: 0});
-	  //this.el.setAttribute('position', {x: (evt.touches[0].clientX-window.innerWidth/2)*scale, y: (window.innerHeight/2-evt.touches[0].clientY)*scale, z: 0});
+				this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
       });
 	</script>
@@ -81,6 +80,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
