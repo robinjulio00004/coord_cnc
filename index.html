@@ -49,10 +49,15 @@
 				this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
-			/*evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)*/
+			const stexto = "";
+			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+				for (let i = 1; i <= 5; i++) 
+				{
+  					stexto += `linea ${i}.\n`; // texto en for
+				}
 			document.getElementById('touch-x1').textContent = true; // touch detect
 			const lineas =document.getElementById('clinea');
-					lineas.textContent = linea1; // ingresar líneas de código
+					lineas.textContent = stexto; // ingresar líneas de código
 		},
       });
 	</script>
@@ -94,6 +99,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
