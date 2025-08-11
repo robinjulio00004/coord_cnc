@@ -18,10 +18,9 @@
         },
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			const scale = 0.006;
 			document.getElementById('touch-x1').textContent = false; // touch detect
+			const scale = 0.006;
   			const touchXElement = document.getElementById('touch-x');
-			/*const touchX1Element = document.getElementById('touch-x1');*/
   			const touchYElement = document.getElementById('touch-y');
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
@@ -44,20 +43,19 @@
 					yt=-0.8;
 				}
 			touchXElement.textContent = xt; // X-coordinate relative to viewport
-			/*touchX1Element.textContent = xt; // X-coordinate relative to viewport*/
     		touchYElement.textContent = yt; // Y-coordinate relative to viewport
-				this.el.setAttribute('position', {x: xt, y: yt, z: 0});
+			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
-			const stexto = " ";
+				document.getElementById('touch-x1').textContent = true; // touch detect
+			/*const stexto = " ";
 			const lineas =document.getElementById('clinea');
 			/*evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)*/
-				for (int i = 1; i <= 5; i++) 
+				/*for (int i = 1; i <= 5; i++) 
 				{
   					stexto += 'linea ${i}.\n'; // texto en for
-				}
-			document.getElementById('touch-x1').textContent = true; // touch detect
-					lineas.textContent = stexto; // ingresar líneas de código
+				}*/
+			/*lineas.textContent = stexto; // ingresar líneas de código*/
 		},
       });
 	</script>
@@ -99,6 +97,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
