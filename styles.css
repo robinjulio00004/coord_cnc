@@ -37,8 +37,8 @@ body{
 #mcode{
       position: absolute;
       margin:0px;
-      top: 100px;
-      left: 50px;
+      top: 150px;
+      left: 1px;
       transform: rotate(90deg);
       color: yellow;
       font-family: sans-serif;
@@ -49,6 +49,7 @@ body{
       box-sizing: border-box;
       z-index: 9;
 }
+
 
 
 
