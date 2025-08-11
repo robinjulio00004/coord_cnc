@@ -51,10 +51,10 @@
 			document.getElementById('touch-x1').textContent = true; // touch detect
 			let stexto = "";
 			const lineBreak = document.createElement('br');
-				for (var i = 1; i <= 5; i++) 
+				for (let i = 1; i <= 5; i++) 
 				{
   					//stexto += `N0${i*10} \n\n\n\n\n\n\n\n\n\n`;
-					stexto+= "N0" + (i*10) + `\n`;
+					stexto+= "N0" + (i*10) + `\n\n\n\n\n\n\n\n\n\n\n`;
 				}
 			document.getElementById('clinea').appendChild(lineBreak);
 			document.getElementById('clinea').textContent = stexto; // ingresar líneas de código
@@ -99,6 +99,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
