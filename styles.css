@@ -20,7 +20,7 @@ body{
       z-index: 10;
     }
 
-.code {
+/*.code {
       display: flex;
       position: absolute;
       margin:0px;
@@ -33,7 +33,7 @@ body{
       align-items: center;
       box-sizing: content-box;
       z-index: 10;
-    }
+    }*/
 
 #mcode{
       transform: rotate(90deg);
@@ -47,6 +47,7 @@ body{
       box-sizing: border-box;
       z-index: 10;
 }
+
 
 
 
