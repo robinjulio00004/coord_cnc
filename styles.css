@@ -21,6 +21,7 @@ body{
 
 .code {
       position: absolute;
+      margin:0px;
       /*bottom: 1;
       left: 1;*/
       width: 100%;
@@ -37,6 +38,7 @@ body{
       align-items: center;
       z-index: 8;
     }
+
 
 
 
