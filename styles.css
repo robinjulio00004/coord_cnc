@@ -24,6 +24,7 @@ body{
       transform: rotate(90deg);
       /*padding:1px;*/
       margin:0px;
+      margin-right: 0px;
       bottom: 66px;
       right: 0px;
       font-family: sans-serif;
@@ -35,5 +36,6 @@ body{
       box-sizing: border-box;
       z-index: 9;
 }
+
 
 
