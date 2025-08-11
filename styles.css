@@ -38,8 +38,8 @@ body{
       position: absolute;
       padding:1px;
       margin:0px;
-      bottom: 30px;
-      right: 10px;
+      bottom: 100px;
+      right: 1px;
       transform: rotate(90deg);
       color: yellow;
       font-family: sans-serif;
@@ -50,6 +50,7 @@ body{
       box-sizing: border-box;
       z-index: 9;
 }
+
 
 
 
