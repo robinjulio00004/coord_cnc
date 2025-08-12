@@ -49,13 +49,15 @@
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			document.getElementById('touch-x1').textContent = true; // touch detect
+			let div = document.getElementById("mcode");
 			let stexto = "";
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
 					stexto+= "N0"+(i*10)+"<br>";
 				}
-				document.getElementById("clinea").innerHTML=stexto;
+					div.innerHTML += stexto;
+				//document.getElementById("clinea").innerHTML=stexto;
 			//document.getElementById('mcode').append( stexto); // ingresar líneas de código
 		},
       });
@@ -98,6 +100,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
