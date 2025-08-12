@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="styles.css">
 
 	<script>
+			let i=0;
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -52,12 +53,12 @@
         },
 				onTouchEnd: function (evt) {
 				var stexto = new array(50);
-				var i=0;
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 
-					stexto[i]+= "N0"+(i)+" "+"<br>";
-					i++;
+					stexto[i]= "N0"+(i+1)+" "+"<br>";
+					
 			document.getElementById("clinea").innerHTML += stexto;
+				i++;
 		},
       });
 	</script>
@@ -98,6 +99,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
