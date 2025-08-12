@@ -21,6 +21,7 @@ body{
 
 #mcode{
       position: absolute;
+      overflow: scroll;
       transform: rotate(90deg);
       margin:0px;
       bottom: -25px;
@@ -37,6 +38,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
 }
+
 
 
 
