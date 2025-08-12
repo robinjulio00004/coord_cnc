@@ -19,12 +19,10 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			document.getElementById('touch-x1').textContent = false; // touch detect
 			const scale = 0.006;
-  			const touchXElement = document.getElementById('touch-x');
-  			const touchYElement = document.getElementById('touch-y');
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
-			let coordx;
-			let coordy;
+			var coordx=0;
+			var coordy=0;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -43,10 +41,10 @@
 				{
 					yt=-0.8;
 				}
-					coordx=Math.abs(yt);
+					coordx=yt;
 					coordy=xt;
-			touchXElement.textContent = xt; // X-coordinate relative to viewport
-    		touchYElement.textContent = yt; // Y-coordinate relative to viewport
+			document.getElementById('touch-x').textContent = xt; // X-coordinate relative to viewport
+    		document.getElementById('touch-y').textContent = yt; // Y-coordinate relative to viewport
 			document.getElementById('cx').textContent = coordx; // touch detect
 			document.getElementById('cy').textContent = coordy; // touch detect
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
@@ -102,6 +100,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
