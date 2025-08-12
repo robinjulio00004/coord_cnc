@@ -25,7 +25,7 @@ body{
       margin:0px;
       bottom: 60px;
       width: 150px;
-      right: 10px;/*100px*/
+      right: 100px;/*100px*/
       height: 200px;/*200px*/
       font-family: sans-serif;
       font-size: 10px;
@@ -36,4 +36,5 @@ body{
       box-sizing: content-box;
       z-index: 9;
 }
+
 
