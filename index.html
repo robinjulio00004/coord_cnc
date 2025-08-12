@@ -50,15 +50,9 @@
 				onTouchEnd: function (evt) {
 				let stexto = new Array();
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-				const myDiv = document.getElementById('clinea');
-				const newParagraph = document.createElement('p');
 					
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-					//stexto[i+1]= "N0"+(i+2)+" M30<br>";
-					newParagraph.textContent = 'N'+(i+2)+' M30';
-          //stexto[i+1]= "N0"+(i+2)+" M30<br>";
-					myDiv.append(stexto[i], newParagraph);
-			//document.getElementById("clinea").innerHTML += stexto.join("");
+			document.getElementById("clinea").innerHTML += stexto.join("");
 					i++;
 		},
       });
@@ -100,6 +94,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
