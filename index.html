@@ -57,7 +57,7 @@
 
 					stexto[i]= "N0"+(i+1)+" <br>";
 					
-			document.getElementById("clinea").innerHTML += stexto;
+			document.getElementById("clinea").innerHTML = stexto.join("");
 				i++;
 		},
       });
@@ -99,6 +99,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
