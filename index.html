@@ -17,7 +17,6 @@
         },
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			document.getElementById('touch-x1').textContent = false; // touch detect
 			const scale = 0.006;
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
@@ -100,6 +99,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
