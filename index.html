@@ -11,6 +11,7 @@
 
 	<script>
 			let i=0;
+			let coordx=0;
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -22,7 +23,7 @@
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
 			var coordy=0;
-			var coordx=0;
+			
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -56,10 +57,11 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 
 					stexto[i]= "N0"+(i+1)+" <br>";
-					stexto[i+1]= "N0"+(i+2)+"M30<br>";
+					i++;
+					stexto[i]= "N0"+(i+1)+coordx+"M30<br>";
 					
 			document.getElementById("clinea").innerHTML += stexto.join("");
-				i++;
+				
 		},
       });
 	</script>
@@ -100,6 +102,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
