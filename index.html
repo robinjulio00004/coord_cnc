@@ -45,14 +45,15 @@
 				}
 					coordx=Math.abs(yt);
 					coordy=xt;
-			touchXElement.textContent = coordx; // X-coordinate relative to viewport
-    		touchYElement.textContent = coordy; // Y-coordinate relative to viewport
+			touchXElement.textContent = xt; // X-coordinate relative to viewport
+    		touchYElement.textContent = yt; // Y-coordinate relative to viewport
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
 				var stexto = "";
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			document.getElementById('touch-x1').textContent = true; // touch detect
+			document.getElementById('cx').textContent = coordx; // touch detect
+			document.getElementById('cy').textContent = coordy; // touch detect
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
@@ -76,7 +77,8 @@
 	</div>
  	 <div id="mcode">
 	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
-	<p>Touch detect: <span id="touch-x1"></span><br></p>
+	<p>coord x: <span id="cx"></span><br></p>
+	<p>coord y: <span id="cy"></span><br></p>
 	<p><span id="clinea"></span></p>
 	<p>N50 M30<br>%</p>
 	 </div>
@@ -100,6 +102,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
