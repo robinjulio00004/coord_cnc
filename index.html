@@ -20,8 +20,8 @@
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			const scale = 0.006;
-			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
-			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
+			let xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
+			let yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -104,6 +104,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
