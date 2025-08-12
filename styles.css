@@ -33,14 +33,15 @@ body{
       font-size: 10px;
       color: yellow;
       background:
-      linear-gradient(217deg, rgb(255 0 0 / 0.8), transparent 70.71%),
-      linear-gradient(127deg, rgb(0 255 0 / 0.8), transparent 70.71%),
-      linear-gradient(336deg, rgb(0 0 255 / 0.8), transparent 70.71%);
+      linear-gradient(217deg, rgb(255 0 0 / .3), transparent 33%),
+      linear-gradient(127deg, rgb(0 255 0 / .3), transparent 33%),
+      linear-gradient(336deg, rgb(0 0 255 / .3), transparent 33%);
       font-weight: bold;
       text-align: left;
       box-sizing: content-box;
       z-index: 9;
 }
+
 
 
 
