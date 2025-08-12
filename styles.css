@@ -25,18 +25,18 @@ body{
       margin:0px;
       bottom: 0px;
       right: 0px;
-      width: 10px;
-      height: 400px;
+      width: 66px;
+      height: 200px;
       font-family: sans-serif;
       font-size: 10px;
       border: 1px solid red;
-      resize: none;
       color: yellow;
       font-weight: bold;
       text-align: left;
       box-sizing: border-box;
       z-index: 9;
 }
+
 
 
 
