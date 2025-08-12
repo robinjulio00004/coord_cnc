@@ -7,7 +7,6 @@ body{
 
 .fmsg {
       position: absolute;
-      padding:5px;
       margin-bottom: 20px;
       top: 10px;
       left: 0px;
@@ -42,4 +41,3 @@ body{
       box-sizing: content-box;
       z-index: 9;
 }
-
