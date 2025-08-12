@@ -48,6 +48,14 @@
 				onTouchEnd: function (evt) {
 				var stexto = "";
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+
+				for (var i = 1; i <= 6; i++) 
+				{
+  					//stexto += `N0${i*10} \n`;
+					stexto+= "N0"+(i*10)+"<br>";
+				}
+			document.getElementById("clinea").innerHTML += stexto;
+
 					coordx=Math.abs(yt);
 					if(coordx==0.5)
 					{
@@ -56,12 +64,6 @@
 						coordy++;
 			document.getElementById('cx').textContent = coordx; // touch detect
 			document.getElementById('cy').textContent = coordy; // touch detect
-				for (var i = 1; i <= 6; i++) 
-				{
-  					//stexto += `N0${i*10} \n`;
-					stexto+= "N0"+(i*10)+"<br>";
-				}
-			document.getElementById("clinea").innerHTML += stexto;
 		},
       });
 	</script>
@@ -104,6 +106,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
