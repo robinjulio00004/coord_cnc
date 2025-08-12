@@ -43,11 +43,11 @@
 					coordx=-yt+0.5;
 					coordx=coordx.toFixed(1)*5;
 					coordy=xt*5;
-			document.getElementById('cx').textContent = coordx; // touch detect
-			document.getElementById('cy').textContent = coordy; // touch detect
+			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
+			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
 
-			document.getElementById('touch-x').textContent = xt; // X-coordinate relative to viewport
-    		document.getElementById('touch-y').textContent = yt; // Y-coordinate relative to viewport
+			//document.getElementById('touch-x').textContent = xt; // X-coordinate touch
+    		//document.getElementById('touch-y').textContent = yt; // Y-coordinate touch
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
@@ -69,16 +69,12 @@
 	<!-- Valores de salida -->
 	<div class="fmsg">
  	 <div>
-	<p>Touch X: <span id="touch-x"> </span></p>
-	 </div>
-	 <div>
-	<p>Touch Y: <span id="touch-y"> </span></p>
+	<p>coordenada X: <span id="cx"> </span> </p>
+	<p>coordenada Y: <span id="cy"> </span> </p>
 	 </div>
 	</div>
  	 <div id="mcode">
 	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
-	<p>coord x: <span id="cx"></span><br></p>
-	<p>coord y: <span id="cy"></span><br></p>
 	<p><span id="clinea"></span></p>
 	<p>N50 M30<br>%</p>
 	 </div>
@@ -102,6 +98,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
