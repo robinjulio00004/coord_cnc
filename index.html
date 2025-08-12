@@ -40,6 +40,10 @@
 				{
 					yt=-0.8;
 				}
+					coordx=-yt;
+					coordy=xt*2;
+			document.getElementById('cx').textContent = coordx; // touch detect
+			document.getElementById('cy').textContent = coordy; // touch detect
 
 			document.getElementById('touch-x').textContent = xt; // X-coordinate relative to viewport
     		document.getElementById('touch-y').textContent = yt; // Y-coordinate relative to viewport
@@ -55,16 +59,6 @@
 					stexto+= "N0"+(i*10)+"<br>";
 				}
 			document.getElementById("clinea").innerHTML += stexto;
-
-					/*coordx=Math.abs(yt);
-					if(coordx==0.5)
-					{
-						coordx=0;
-					}*/
-						coordx=coordx+1;
-						coordy=coordy+1;
-			document.getElementById('cx').textContent = coordx; // touch detect
-			document.getElementById('cy').textContent = coordy; // touch detect
 		},
       });
 	</script>
@@ -107,6 +101,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
