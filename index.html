@@ -20,8 +20,8 @@
 			const scale = 0.006;
 			let xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			let yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
-			var coordy=0;
-			var coordx=0;
+			let coordy=0;
+			let coordx=0;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -57,7 +57,7 @@
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
-					stexto+= "N0"+(i*10)+"<br>";
+					stexto+= "N0"+i+coordx+" "+coordy+" "+"<br>";
 				}
 			document.getElementById("clinea").innerHTML += stexto;
 		},
@@ -100,36 +100,3 @@
 	</a-scene>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
