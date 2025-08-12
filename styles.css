@@ -25,6 +25,8 @@ body{
       margin:0px;
       bottom: 66px;
       right: 0px;
+      width: 150px;
+      height: 150px;
       font-family: sans-serif;
       font-size: 10px;
       border: 1px solid red;
@@ -35,6 +37,7 @@ body{
       box-sizing: border-box;
       z-index: 9;
 }
+
 
 
 
