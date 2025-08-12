@@ -41,6 +41,10 @@
 					yt=-0.8;
 				}
 					coordx=Math.abs(yt);
+					if(coordx=0.5)
+					{
+						coordx=0;
+					}
 					coordy=xt;
 			document.getElementById('touch-x').textContent = xt; // X-coordinate relative to viewport
     		document.getElementById('touch-y').textContent = yt; // Y-coordinate relative to viewport
@@ -99,6 +103,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
