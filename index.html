@@ -53,9 +53,9 @@
 
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 					stexto[i+1]= "N0"+(i+2)+" M30<br>";
-					stexto[i]=stexto[i+1];
 			document.getElementById("clinea").innerHTML += stexto.join("");
-			i++;
+					i++;
+					stexto[i]=stexto[i+1];
 		},
       });
 	</script>
@@ -96,6 +96,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
