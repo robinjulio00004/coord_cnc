@@ -10,8 +10,6 @@
 		<link rel="stylesheet" href="styles.css">
 
 	<script>
-			let coordy=0;
-			let coordx=0;
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -22,6 +20,8 @@
 			const scale = 0.006;
 			let xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			let yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
+			var coordy=0;
+			var coordx=0;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -41,7 +41,7 @@
 					yt=-0.8;
 				}
 					coordx=-yt+0.5;
-					coordx=coordx.toFixed(1);
+					coordx=coordx.toFixed(1)*5;
 					coordy=xt*5;
 			document.getElementById('cx').textContent = coordx; // touch detect
 			document.getElementById('cy').textContent = coordy; // touch detect
@@ -102,6 +102,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
