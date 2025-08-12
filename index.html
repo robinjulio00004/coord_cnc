@@ -20,8 +20,8 @@
 			const scale = 0.006;
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
-			var coordx=0;
-			var coordy=0;
+			var coordx;
+			var coordy;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -107,6 +107,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
