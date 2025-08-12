@@ -47,13 +47,13 @@
 					coordy=xt;
 			touchXElement.textContent = xt; // X-coordinate relative to viewport
     		touchYElement.textContent = yt; // Y-coordinate relative to viewport
+			document.getElementById('cx').textContent = coordx; // touch detect
+			document.getElementById('cy').textContent = coordy; // touch detect
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
 				var stexto = "";
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			document.getElementById('cx').textContent = coordx; // touch detect
-			document.getElementById('cy').textContent = coordy; // touch detect
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
@@ -102,6 +102,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
