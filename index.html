@@ -50,10 +50,11 @@
 				onTouchEnd: function (evt) {
 				let stexto = new Array();
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			document.getElementById("clinea").innerHTML += stexto.join("");
 					i++;
+					document.createElement('span').textContent = 'N0'+(i+1)+' M30';
+					document.getElementById("clinea").append(flinea);
 		},
       });
 	</script>
@@ -94,6 +95,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
