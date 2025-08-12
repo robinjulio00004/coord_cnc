@@ -11,6 +11,7 @@
 
 	<script>
 			let coordy=0;
+			let coordx=0;
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -21,7 +22,6 @@
 			const scale = 0.006;
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
-			var coordx;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -40,25 +40,22 @@
 				{
 					yt=-0.8;
 				}
-					coordx=Math.abs(yt);
-					if(coordx==0.5)
-					{
-						coordx=0;
-					}
-					//coordy=xt;
-					if(xt%0.2==0)
-					{
-						coordy++;
-					}
+
 			document.getElementById('touch-x').textContent = xt; // X-coordinate relative to viewport
     		document.getElementById('touch-y').textContent = yt; // Y-coordinate relative to viewport
-			document.getElementById('cx').textContent = coordx; // touch detect
-			document.getElementById('cy').textContent = coordy; // touch detect
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
 				var stexto = "";
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+					coordx=Math.abs(yt);
+					if(coordx==0.5)
+					{
+						coordx=0;
+					}
+						coordy++;
+			document.getElementById('cx').textContent = coordx; // touch detect
+			document.getElementById('cy').textContent = coordy; // touch detect
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
@@ -107,6 +104,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
