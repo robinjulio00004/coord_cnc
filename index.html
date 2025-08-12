@@ -5,7 +5,6 @@
 	<meta charset="utf-8"/> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<!--<meta name="viewport" content="width=x" />-->
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
 		<link rel="stylesheet" href="styles.css">
@@ -47,16 +46,15 @@
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
+				var stexto = "";
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			document.getElementById('touch-x1').textContent = true; // touch detect
-			let stexto = "";
 				for (var i = 1; i <= 6; i++) 
 				{
   					//stexto += `N0${i*10} \n`;
 					stexto+= "N0"+(i*10)+"<br>";
 				}
-				document.getElementById("clinea").innerHTML += stexto;
-				//document.getElementById("mcode").innerHTML=stexto;
+			document.getElementById("clinea").innerHTML += stexto;
 		},
       });
 	</script>
@@ -98,44 +96,3 @@
 	</a-scene>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
