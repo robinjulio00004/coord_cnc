@@ -23,6 +23,8 @@
   			const touchYElement = document.getElementById('touch-y');
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
+			let coordx;
+			let coordy;
 				xt=xt.toFixed(1);
 				yt=yt.toFixed(1);
 				if(xt>1.0)
@@ -41,8 +43,10 @@
 				{
 					yt=-0.8;
 				}
-			touchXElement.textContent = xt; // X-coordinate relative to viewport
-    		touchYElement.textContent = yt; // Y-coordinate relative to viewport
+					coordx=-yt;
+					coordy=xt;
+			touchXElement.textContent = coordx; // X-coordinate relative to viewport
+    		touchYElement.textContent = coordy; // Y-coordinate relative to viewport
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
@@ -96,5 +100,6 @@
 	</a-scene>
 </body>
 </html>
+
 
 
