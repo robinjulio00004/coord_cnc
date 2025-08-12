@@ -51,13 +51,12 @@
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
-				var stexto = "";
+				var stexto = new array(50);
+				var i=0;
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 
-				for (var i = 1; i <= 6; i++) 
-				{
-					stexto+= "N0"+(i)+" "+"<br>";
-				}
+					stexto[i]+= "N0"+(i)+" "+"<br>";
+					i++;
 			document.getElementById("clinea").innerHTML += stexto;
 		},
       });
@@ -99,6 +98,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
