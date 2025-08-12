@@ -23,9 +23,9 @@ body{
       position: absolute;
       transform: rotate(90deg);
       margin:0px;
-      bottom: 0px;/*60px*/
+      bottom: -50px;/*60px*/
       width: 150px;/*150px*/
-      right: 100px;/*100px*/
+      right: 50px;/*100px*/
       height: 250px;/*100px*/
       font-family: sans-serif;
       font-size: 10px;
@@ -36,6 +36,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
 }
+
 
 
 
