@@ -53,13 +53,12 @@
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 					i++;
 			document.getElementById("clinea").innerHTML += stexto.join("");	
-				const content=document.getElementById('clinea');
-				const flinea=document.createElement('span');
-				flinea.innerHTML += 'N0'+(i+1)+' M30'+'<br>%';
-				content.append(flinea);
 		},
       });
-
+				const content=document.getElementById('clinea');
+				const flinea=document.createElement('span');
+				flinea.innerHTML = 'N0'+(i+1)+' M30'+'<br>%';
+				content.append(flinea);
 	</script>
 		
 	</head>
@@ -96,5 +95,6 @@
 	</a-scene>
 </body>
 </html>
+
 
 
