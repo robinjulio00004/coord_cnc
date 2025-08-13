@@ -55,12 +55,7 @@
 			document.getElementById("clinea").innerHTML += stexto.join("");
 					
 		},
-			const flinea=document.getElementById("clinea");
-			const nlinea=document.createElement('span');
-			nlinea.textContent = 'N0'+(i+1)+' M30';
-			flinea.append(nlinea);
-			//document.getElementById("clinea").append(document.createElement('span').textContent = 'N0'+(i+1)+' M30');
-			
+			document.getElementById("clinea").append(document.createElement('span').innerHTML = 'N0'+(i+1)+' M30'+'<br>%';			
       });
 	</script>
 		
@@ -99,6 +94,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
