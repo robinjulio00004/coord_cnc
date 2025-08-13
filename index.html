@@ -22,6 +22,7 @@
  	 <div id="mcode">
 	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
 	<p><span id="clinea"></span></p>
+	<!--<p><span id="flinea"></span></p>-->
 	 </div>
 		 
 	<!-- Scene -->
@@ -92,9 +93,10 @@
 const flinea=document.createElement('span');
 //flinea.innerHTML += 'N0'+(i+1)+' M30'+'<br>%';
 flinea.innerHTML = 'fin de programa<br>%'		
-document.getElementById("mcode").append(flinea);
+document.getElementById("clinea").append(flinea);
 	</script>
 </html>
+
 
 
 
