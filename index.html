@@ -50,11 +50,14 @@
 				onTouchEnd: function (evt) {
 				let stexto = new Array();
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-			//document.getElementById("clinea").innerHTML += stexto.join("");//imprime coordenadas bien	
-			document.getElementById("clinea").innerHTML = stexto.join("");	
+					stexto[i+1]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
+					stexto[i+2]="Fin prog";
+			//document.getElementById("clinea").innerHTML += stexto.join("");//imprime coordenadas	en lista
+			document.getElementById("clinea").innerHTML = stexto.join("");//imprime solo una coordenada	
 			//stexto[i+1]= "N0"+(i+1)+"fin de programa <br>";
-			//document.getElementById("clinea").innerHTML = stexto.join("");	
+			//document.getElementById("clinea").innerHTML = stexto.join("");
+					stexto[i]=stexto[i+1];
+					stexto[i+1]=stexto[i+2];
 					i++;
 		},
       },);
@@ -95,6 +98,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
