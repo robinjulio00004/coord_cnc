@@ -52,9 +52,12 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 					i++;
-			document.getElementById("clinea").innerHTML += stexto.join("");
-					
-		},
+			document.getElementById("clinea").innerHTML += stexto.join("");		
+		}
+				const content=document.getElementById('clinea');
+				const flinea=document.createElement('span');
+				flinea.innerHTML = 'N0'+(i+1)+' M30'+'<br>%';
+				content.append(flinea);
       });
 	</script>
 		
@@ -92,40 +95,4 @@
 		
 	</a-scene>
 </body>
-	<script>
-		document.getElementById("clinea").append(document.createElement('span').innerHTML = 'N0'+(i+1)+' M30'+'<br>%';
-	</script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
