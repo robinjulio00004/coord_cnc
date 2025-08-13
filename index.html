@@ -8,6 +8,39 @@
     	<script src="aframe-v1.6.0.min.js"></script>
     	<script src="aframe-ar.js"></script>
 		<link rel="stylesheet" href="styles.css">
+	</head>
+<body>
+	<!-- Valores de salida -->
+	<div class="fmsg">
+ 	 <div>
+	<p>coordenada X: <span id="cx">&nbsp;</span></p>
+	 </div>
+	 <div>
+	<p>coordenada Y: <span id="cy"></span></p>
+	 </div>
+	</div>
+ 	 <div id="mcode">
+	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
+	<p><span id="clinea"></span></p>
+	 </div>
+		 
+	<!-- Scene -->
+	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
+	<!-- Asset Management -->	
+	<a-assets>
+	<img id="img1" src="coord_sist.png">
+	<img id="img2" src="cero_pieza.png">
+    <a-asset-item id="tool" src="cortador.glb"></a-asset-item>
+  	</a-assets>
+
+	<a-image src="#img1" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
+	<a-image src="#img2" position="0 0.5 0" rotation="0 0 -90" width="0.25" height="0.25"></a-image>
+	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move></a-entity>
+		
+	<!-- Camera -->
+	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
+	</a-scene>
+</body>
 
 	<script>
 			let i=0, coordx=0, coordy=0;
@@ -60,41 +93,8 @@ const flinea=document.createElement('span');
 flinea.innerHTML += 'N0'+(i+1)+' M30'+'<br>%';
 document.getElementById("clinea").append(flinea);
 	</script>
-		
-	</head>
-<body>
-	<!-- Valores de salida -->
-	<div class="fmsg">
- 	 <div>
-	<p>coordenada X: <span id="cx">&nbsp;</span></p>
-	 </div>
-	 <div>
-	<p>coordenada Y: <span id="cy"></span></p>
-	 </div>
-	</div>
- 	 <div id="mcode">
-	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
-	<p><span id="clinea"></span></p>
-	 </div>
-		 
-	<!-- Scene -->
-	<a-scene arjs embedded renderer="logarithmicDepthBuffer: true;" xr-mode-ui="enabled: true">
-	<!-- Asset Management -->	
-	<a-assets>
-	<img id="img1" src="coord_sist.png">
-	<img id="img2" src="cero_pieza.png">
-    <a-asset-item id="tool" src="cortador.glb"></a-asset-item>
-  	</a-assets>
-
-	<a-image src="#img1" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
-	<a-image src="#img2" position="0 0.5 0" rotation="0 0 -90" width="0.25" height="0.25"></a-image>
-	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move></a-entity>
-		
-	<!-- Camera -->
-	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
-	</a-scene>
-</body>
 </html>
+
 
 
 
