@@ -48,15 +48,9 @@
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
-				
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-					//stexto[i+1]="Fin prog";
-			//document.getElementById("clinea").innerHTML += stexto.join("");//imprime coordenadas	en lista
+			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			document.getElementById("clinea").innerHTML += stexto.join("");//imprime solo una coordenada	
-			//stexto[i+1]= "N0"+(i+1)+"fin de programa <br>";
-			//document.getElementById("clinea").innerHTML = stexto.join("");
-					
 					i++;
 		},
       },);
@@ -97,6 +91,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
