@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="styles.css">
 
 	<script>
-			let i=0, coordx=0, coordy=0;
+			let i=0, coordx=0, coordy=0,let stexto = new Array();
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -48,12 +48,12 @@
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
-				let stexto = new Array();
+				
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-					stexto[i+1]="Fin prog";
+					//stexto[i+1]="Fin prog";
 			//document.getElementById("clinea").innerHTML += stexto.join("");//imprime coordenadas	en lista
-			document.getElementById("clinea").innerHTML = stexto(i).join("");//imprime solo una coordenada	
+			document.getElementById("clinea").innerHTML += stexto.join("");//imprime solo una coordenada	
 			//stexto[i+1]= "N0"+(i+1)+"fin de programa <br>";
 			//document.getElementById("clinea").innerHTML = stexto.join("");
 					
@@ -97,6 +97,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
