@@ -51,15 +51,11 @@
 				let stexto = new Array();
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
+					stexto[i+1]= "N30"+(i+1)+" <br>";
 					i++;
-			document.getElementById("clinea").innerHTML += stexto.join("");	
+			document.getElementById("clinea").innerHTML = stexto;	
 		},
-      },
-				let content=document.getElementById('mcode');
-				let flinea=document.createElement('span');
-				flinea.innerHTML = 'N0'+(i+1)+' M30'+'<br>%';
-				content.append(flinea);
-	);
+      },);
 
 	</script>
 		
@@ -97,6 +93,7 @@
 	</a-scene>
 </body>
 </html>
+
 
 
 
