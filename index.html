@@ -53,12 +53,12 @@
 					stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 					i++;
 			document.getElementById("clinea").innerHTML += stexto.join("");		
-		}
+		},
+      });
 				const content=document.getElementById('clinea');
 				const flinea=document.createElement('span');
 				flinea.innerHTML = 'N0'+(i+1)+' M30'+'<br>%';
 				content.append(flinea);
-      });
 	</script>
 		
 	</head>
@@ -92,7 +92,6 @@
 		
 	<!-- Camera -->
 	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
-		
 	</a-scene>
 </body>
 </html>
