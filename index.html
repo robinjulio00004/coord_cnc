@@ -20,7 +20,7 @@
 	 </div>
 	</div>
  	 <div id="mcode">
-	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N00 G00 G90 G54 X0.Y0.Z1.</p>
+	<p>% <br>Muestra de programa para código G <br> <br> O0001 <br> N01 G00 G90 G54 X0.Y0.Z1.</p>
 	<p><span id="clinea"></span></p>
 	<!--<p><span id="flinea"></span></p>-->
 	 </div>
@@ -89,10 +89,10 @@
 					i++;
 		},
       });
-const flinea=document.createElement('span');
-//flinea.innerHTML += 'N0'+(i+1)+' M30'+'<br>%';
-flinea.innerHTML = 'fin de programa<br>%'		
-document.getElementById("clinea").appendChild(flinea);
+				const flinea=document.createElement('span');
+			flinea.innerHTML = 'N0'+(i+1)+' M30'+'<br>%';		
+			document.getElementById("mcode").append(flinea);
 	</script>
 </html>
+
 
