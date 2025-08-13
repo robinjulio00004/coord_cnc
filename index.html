@@ -20,7 +20,7 @@
 	 </div>
 	</div>
  	 <div id="mcode">
-	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N10 G00 G90 G54 X0.Y0.Z1.<br></p>
+	<p>% <br>;Muestra de programa para código G <br> O0001 <br> N00 G00 G90 G54 X0.Y0.Z1.</p>
 	<p><span id="clinea"></span></p>
 	<!--<p><span id="flinea"></span></p>-->
 	 </div>
@@ -44,7 +44,7 @@
 </body>
 
 	<script>
-			let i=0, coordx=0, coordy=0;
+			let i=1, coordx=0, coordy=0;
 			let stexto = new Array();
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
@@ -92,6 +92,7 @@
 const flinea=document.createElement('span');
 //flinea.innerHTML += 'N0'+(i+1)+' M30'+'<br>%';
 flinea.innerHTML = 'fin de programa<br>%'		
-document.getElementById("clinea").append(flinea);
+document.getElementById("clinea").appendChild(flinea);
 	</script>
 </html>
+
