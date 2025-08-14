@@ -86,14 +86,15 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			document.getElementById("clinea").innerHTML = stexto.join("");//imprime solo una coordenada	
+			document.getElementById("flinea").innerHTML = "N0"+(i+2)+" M30<br>%";	
 					i++;
-			flinea.innerHTML = "N0"+(i+1)+" M30<br>%";	
-			document.getElementById("mcode").append(flinea);
+			//document.getElementById("mcode").append(flinea);
 		},
       });
 			
 	</script>
 </html>
+
 
 
 
