@@ -45,6 +45,7 @@
 	<script>
 			let i=1,j=0, coordx=0, coordy=0;
 			let stexto = new Array();
+			let flinea=document.createElement('span');
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -86,14 +87,14 @@
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			document.getElementById("clinea").innerHTML = stexto.join("");//imprime solo una coordenada	
 					i++;
+					j++;
 		},
-      },
-			let flinea=document.createElement('span');
-			flinea.innerHTML = "N0"+(i+2)+" M30<br>%";	
+      });
+			flinea.innerHTML = "N0"+(j+2)+" M30<br>%";	
 			document.getElementById("mcode").append(flinea);
-		);
 	</script>
 </html>
+
 
 
 
