@@ -86,7 +86,7 @@
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-			document.getElementById("clinea").innerHTML = stexto.join("");//imprime solo una coordenada	
+			document.getElementById("clinea").innerHTML = stexto.join("");
 			document.getElementById("flinea").innerHTML = "N0"+(i+2)+" M30<br>%";	
 					i++;
 		},
@@ -94,6 +94,7 @@
 			
 	</script>
 </html>
+
 
 
 
