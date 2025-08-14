@@ -88,13 +88,14 @@
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			document.getElementById("clinea").innerHTML = stexto.join("");//imprime solo una coordenada	
 					i++;
-				flinea.innerHTML = "N0"+(j+2)+" M30<br>%";	
+				flinea.innerHTML = "N0"+(i+2)+" M30<br>%";	
 			document.getElementById("mcode").append(flinea);
 		},
       });
 			
 	</script>
 </html>
+
 
 
 
