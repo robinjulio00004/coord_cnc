@@ -45,23 +45,24 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0;
-			let stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59, stexto = new Array();
 			stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
 			document.getElementById("clineas").innerHTML = stexto[0];
 
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");
-			ctx.beginPath();
-			//ctx.moveTo(250,350);
+			//ctx.beginPath();
+			//ctx.moveTo(dx+coordx, dy+coordy);
 			//ctx.lineTo(260,360);
 			//ctx.lineWidth=1;
 			//ctx.strokeStyle="red";
-			ctx.arc(158, 59, 1, 0, 2 * Math.PI); 
-      		ctx.strokeStyle="green";
-      		ctx.fillStyle = "green";
-      		ctx.fill();
-			ctx.stroke();
+			//ctx.stroke();
+		
+			//ctx.arc(dx, dy, 1, 0, 2 * Math.PI); 
+      		//ctx.strokeStyle="green";
+      		//ctx.fillStyle = "green";
+      		//ctx.fill();
+			//ctx.stroke();
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -95,8 +96,13 @@
 					coordy=xt*5;
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
-
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
+			ctx.beginPath();
+			ctx.moveTo(dx,dy);
+			ctx.lineTo(dx+coordx,dy+coordy);
+			ctx.lineWidth=1;
+			ctx.strokeStyle="red";
+			ctx.stroke();
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -111,6 +117,7 @@
 			
 	</script>
 </html>
+
 
 
 
