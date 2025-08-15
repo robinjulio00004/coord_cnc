@@ -47,9 +47,11 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
-#div2{
+#botones{
+	  position: absolute;
       padding: 20px;
 	  text-align: center;
 	  border: 1px solid red;
       }
+
 
