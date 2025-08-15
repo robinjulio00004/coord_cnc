@@ -92,8 +92,8 @@
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
 					ctx.beginPath();
-					ctx.moveTo(dy,dx);
-					ctx.lineTo(dy+coordy,dx+coordx);
+					ctx.moveTo(dx,dy);
+					ctx.lineTo(dx+coordy,dy+coordx);
 					ctx.lineWidth=1;
 					ctx.strokeStyle="red";
 					ctx.stroke();
@@ -111,6 +111,7 @@
 			
 	</script>
 </html>
+
 
 
 
