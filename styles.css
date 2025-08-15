@@ -6,7 +6,6 @@ body{
     }
 #micanvas{
       position: absolute;
-      border: 1px solid red;
       margin:0px;
       top: 10px;
       left: 5px;
@@ -48,16 +47,3 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
