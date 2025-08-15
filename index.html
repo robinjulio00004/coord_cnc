@@ -45,7 +45,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescala=6, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6,fescalay=10, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
@@ -84,12 +84,6 @@
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
-					//ctx.beginPath();
-					//ctx.moveTo(dx,dy);
-					//ctx.lineTo(dx+coordy*fescala,dy+coordx*fescala);
-					//ctx.lineWidth=1;
-					//ctx.strokeStyle="red";
-					//ctx.stroke();
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -101,7 +95,7 @@
 					i++;
 					ctx.beginPath();
 					ctx.moveTo(dx,dy);
-					ctx.lineTo(dx+coordy*fescala,dy+coordx*fescala);
+					ctx.lineTo(dx+coordy*fescalay,dy+coordx*fescalax);
 					ctx.lineWidth=3;
 					ctx.strokeStyle="red";
 					ctx.stroke();
@@ -110,34 +104,3 @@
 			
 	</script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
