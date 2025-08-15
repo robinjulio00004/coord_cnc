@@ -12,6 +12,10 @@
 <body>
 	<!-- Canvas -->
 	<canvas id="micanvas"></canvas>
+	<!-- Botones -->
+	<div id="div2">
+        <input id="button1" type="submit" class="reset" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
+    </div>
 	<!-- Valores de salida -->
 	<div class="fmsg">
  	 <div>
@@ -101,9 +105,13 @@
 					ctx.stroke();
 		},
       });
-			
+			function restablecer()
+			{
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+			}
 	</script>
 </html>
+
 
 
 
