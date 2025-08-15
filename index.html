@@ -94,10 +94,10 @@
 			document.getElementById("msg").innerHTML = hactiva;
 					if(hactiva===true)
 					{
-						this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
-						//hactiva = false;
+						//this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
+						hactiva = false;
 					}
-			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
+			this.el.setAttribute('position', {x: 0, y: 0, z: 0});
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -127,6 +127,7 @@
 			}
 	</script>
 </html>
+
 
 
 
