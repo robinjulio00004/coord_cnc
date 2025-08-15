@@ -49,7 +49,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva = false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const hcorte = document.getElementById("tool");
 			const ctx = canvas.getContext("2d");	
@@ -90,6 +90,11 @@
 					coordy=xt*5;
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
+					if(hactiva===true)
+					{
+						this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
+						hactiva = false;
+					}
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
         },
 				onTouchEnd: function (evt) {
@@ -112,11 +117,13 @@
 				ctx.beginPath();
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
-				hcorte.setAttribute('position', {x: 0, y: 0.5, z: 0});
+				hactiva = true;
+				//hcorte.setAttribute('position', {x: 0, y: 0.5, z: 0});
 				//document.querySelector('#tool').object3D.position.set(0, 0.5, 0);
 			}
 	</script>
 </html>
+
 
 
 
