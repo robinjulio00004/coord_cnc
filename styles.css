@@ -7,10 +7,10 @@ body{
 #canvas{
       position: absolute;
       border: 1px solid red;
-      margin:0px;
+      /*margin:0px;*/
       width: 500px;
       height: 500px;
-      z-index: 8;
+      z-index: 9999;
       }
 .fmsg {
       position: absolute;
@@ -47,4 +47,5 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+
 
