@@ -81,8 +81,6 @@
 					coordx=-yt+0.5;
 					coordx=coordx.toFixed(1)*5;
 					coordy=xt*5;
-					canvx=coordy;
-					canvy=coordx;
 			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
@@ -97,17 +95,16 @@
 					i++;
 					ctx.beginPath();
 					ctx.moveTo(dx,dy);
-					ctx.lineTo(dx+canvx*fescalay,dy+canvy*fescalax);
+					ctx.lineTo(dx+coordx*fescalay,dy+coordy*fescalax);
 					ctx.lineWidth=3;
 					ctx.strokeStyle="green";
 					ctx.stroke();
-					canvx+=canvx;
-					canvy+=canvy;
 		},
       });
 			
 	</script>
 </html>
+
 
 
 
