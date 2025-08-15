@@ -52,14 +52,15 @@ body{
 	  transform: rotate(90deg);
 	  margin:0px;
 	  width: 150px;
-      bottom: -25px;
+      bottom: 10px;
 	  height: 50px;
       left: 50px;
       padding: 10px;
-	  text-align: center;
+	  text-align: left;
 	  border: 1px solid red;
 	  z-index: 9
       }
+
 
 
 
