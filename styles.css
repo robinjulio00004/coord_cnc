@@ -4,7 +4,9 @@ body{
   height:100vh;
   overflow:hidden;
 }
-
+#canvas{
+  border: 1px solid red;
+}
 .fmsg {
       position: absolute;
       margin-bottom: 20px;
@@ -41,3 +43,4 @@ body{
       box-sizing: content-box;
       z-index: 9;
 }
+
