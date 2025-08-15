@@ -4,7 +4,7 @@ body{
   height:100vh;
   overflow:hidden;
     }
-#canvas{
+#micanvas{
       position: absolute;
       border: 1px solid red;
       /*margin:0px;*/
@@ -47,6 +47,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+
 
 
 
