@@ -50,14 +50,8 @@
 			document.getElementById("clineas").innerHTML = stexto[0];
 
 			const canvas = document.getElementById("micanvas");
-			const ctx = canvas.getContext("2d");
+			const ctx = canvas.getContext("2d");	
 			//ctx.beginPath();
-			//ctx.moveTo(dx+coordx, dy+coordy);
-			//ctx.lineTo(260,360);
-			//ctx.lineWidth=1;
-			//ctx.strokeStyle="red";
-			//ctx.stroke();
-		
 			//ctx.arc(dx, dy, 1, 0, 2 * Math.PI); 
       		//ctx.strokeStyle="green";
       		//ctx.fillStyle = "green";
@@ -97,12 +91,12 @@
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
 			this.el.setAttribute('position', {x: xt, y: yt, z: 0});
-			ctx.beginPath();
-			ctx.moveTo(dx,dy);
-			ctx.lineTo(dx+coordx,dy+coordy);
-			ctx.lineWidth=1;
-			ctx.strokeStyle="red";
-			ctx.stroke();
+					ctx.beginPath();
+					ctx.moveTo(dy,dx);
+					ctx.lineTo(dy+coordy,dx+coordx);
+					ctx.lineWidth=1;
+					ctx.strokeStyle="red";
+					ctx.stroke();
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -117,6 +111,7 @@
 			
 	</script>
 </html>
+
 
 
 
