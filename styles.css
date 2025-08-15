@@ -8,12 +8,10 @@ body{
       position: absolute;
       border: 1px solid red;
       margin:0px;
-     /* top: 0px;
-      left: 0px;*/
+      top: 10px;
+      left: 5px;
       width: 95%;
       height: 95%;
-      /*width: 200px;*/
-      /*height: 200px;*/
       }
 .fmsg {
       position: absolute;
@@ -50,6 +48,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+
 
 
 
