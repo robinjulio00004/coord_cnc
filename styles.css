@@ -49,5 +49,7 @@ body{
       }
 #div2{
       padding: 20px;
-	    text-align: center;
+	  text-align: center;
+	  border: 1px solid red;
       }
+
