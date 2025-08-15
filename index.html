@@ -50,6 +50,15 @@
 			let stexto = new Array();
 			stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
 			document.getElementById("clineas").innerHTML = stexto[0];
+
+			const canvas = document.getElementById("micanvas");
+			const ctx = canvas.getContext("2d");
+			ctx.beginPath();
+			ctx.moveTo(250,250);
+			ctx.lineTo(350,350);
+			ctx.lineWidth=3;
+			ctx.strokeStyle="red";
+			ctx.stroke();
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -99,4 +108,5 @@
 			
 	</script>
 </html>
+
 
