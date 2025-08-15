@@ -57,7 +57,7 @@
 			//ctx.lineTo(260,360);
 			//ctx.lineWidth=1;
 			//ctx.strokeStyle="red";
-			ctx.arc(155, 60, 1, 0, 2 * Math.PI); 
+			ctx.arc(160, 55, 1, 0, 2 * Math.PI); 
       		ctx.strokeStyle="green";
       		ctx.fillStyle = "green";
       		ctx.fill();
@@ -69,7 +69,7 @@
         },
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			const scale = 1;//0.006
+			const scale = 0.006;
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
 			var yt = (window.innerHeight/2-evt.touches[0].clientY)*scale;
 				xt=xt.toFixed(1);
@@ -111,6 +111,7 @@
 			
 	</script>
 </html>
+
 
 
 
