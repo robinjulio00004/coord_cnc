@@ -10,9 +10,8 @@ body{
       margin:0px;
       top: 0px;
       left: 0px;
-      width: 200px;
-      height: 200px;
-      /*z-index: 9999;*/
+      /*width: 200px;*/
+      /*height: 200px;*/
       }
 .fmsg {
       position: absolute;
@@ -49,6 +48,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+
 
 
 
