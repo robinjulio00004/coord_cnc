@@ -3,11 +3,12 @@ body{
   width:100vw;
   height:100vh;
   overflow:hidden;
-}
+    }
 #canvas{
-  border: 1px solid red;
-  z-index: 8;
-}
+      position: absolute;
+      border: 1px solid red;
+      z-index: 8;
+      }
 .fmsg {
       position: absolute;
       margin-bottom: 20px;
@@ -20,8 +21,7 @@ body{
       justify-content: center;
       align-items: center;
       z-index: 10;
-    }
-
+      }
 #mcode{
       position: absolute;
       overflow: auto;
@@ -43,6 +43,4 @@ body{
       text-align: left;
       box-sizing: content-box;
       z-index: 9;
-}
-
-
+      }
