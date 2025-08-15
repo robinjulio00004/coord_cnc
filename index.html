@@ -21,8 +21,7 @@
 	</div>
  	 <div id="mcode">
 	<p>%<br>;Muestra de programa en código G y M<br><br>O0001</p>
-	<p id="clinea"></p>
-	<p id="flinea"></p>
+	<p id="clineas"></p>
 	 </div>
 		 
 	<!-- Scene -->
@@ -47,7 +46,7 @@
 			let i=1, coordx=0, coordy=0;
 			let stexto = new Array();
 			stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
-			document.getElementById("clinea").innerHTML = stexto[0];
+			document.getElementById("clineas").innerHTML = stexto[0];
 		    AFRAME.registerComponent('touch-move', {
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
@@ -87,21 +86,13 @@
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-			document.getElementById("clinea").innerHTML = stexto[i];
 			stexto[i+1]="N0"+(i+2)+" M30<br>%";
-			document.getElementById("clinea").innerHTML = stexto[i+1];
-			document.getElementById("clinea").innerHTML = stexto.join("");
-			document.getElementById("flinea").innerHTML = "N0"+(i+2)+" M30<br>%";	
+			document.getElementById("clineas").innerHTML = stexto[i];
+			document.getElementById("clineas").innerHTML = stexto[i+1];
+			document.getElementById("clineas").innerHTML = stexto.join("");
 					i++;
 		},
       });
 			
 	</script>
 </html>
-
-
-
-
-
-
-
