@@ -98,7 +98,7 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(hactiva===true)
 					{
-						this.el.object3D.position.set(0, 0.5, 0);
+						//this.el.object3D.position.set(0, 0.5, 0);
 						//this.el.setAttribute('position', {x: 0, y: 0, z: 0});
 						hactiva = false;
 					}
@@ -113,8 +113,9 @@
 					ctx.strokeStyle="cyan";
 					ctx.stroke();
 		},
-      });
-			function restablecer()
+				
+      	},
+				function restablecer()
 			{
 				ctx.reset();
 				ctx.beginPath();
@@ -122,6 +123,10 @@
 				ctx.moveTo(dx,dy);
 				hactiva = true;
 				document.getElementById("msg").innerHTML = hactiva;
+				this.el.object3D.position.set(0, 0.5, 0);
 			}
+		);
+			
 	</script>
 </html>
+
