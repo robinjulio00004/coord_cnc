@@ -48,6 +48,8 @@
 			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
+			ctx.beginPath();
+			ctx.moveTo(dx,dy);
 			stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
 			document.getElementById("clineas").innerHTML = stexto[0];
 		    AFRAME.registerComponent('touch-move', {
@@ -93,8 +95,6 @@
 			document.getElementById("clineas").innerHTML = stexto[i+1];
 			document.getElementById("clineas").innerHTML = stexto.join("");
 					i++;
-					ctx.beginPath();
-					ctx.moveTo(dx,dy);
 					ctx.lineTo(dx+coordx*fescalay,dy+coordy*fescalax);
 					ctx.lineWidth=3;
 					ctx.strokeStyle="green";
@@ -104,6 +104,7 @@
 			
 	</script>
 </html>
+
 
 
 
