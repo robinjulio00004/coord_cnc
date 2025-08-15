@@ -20,8 +20,7 @@
 	 </div>
 	</div>
  	 <div id="mcode">
-	<p>%<br>;Muestra de programa en código G y M<br>O0001<br></p>
-	<!--<p>N01 G00 G90 G54 X0.Y0.Z1.</p>-->
+	<p>%<br>;Muestra de programa en código G y M<br><br>O0001</p>
 	<p id="clinea"></p>
 	<p id="flinea"></p>
 	 </div>
@@ -88,7 +87,10 @@
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
-			document.getElementById("clinea").innerHTML = stexto.join("");
+			document.getElementById("clinea").innerHTML = stexto[i];
+			stexto[i+1]="N0"+(i+2)+" M30<br>%";
+			document.getElementById("clinea").innerHTML = stexto[i+1].join("");
+			//document.getElementById("clinea").innerHTML = stexto.join("");
 			document.getElementById("flinea").innerHTML = "N0"+(i+2)+" M30<br>%";	
 					i++;
 		},
@@ -96,6 +98,7 @@
 			
 	</script>
 </html>
+
 
 
 
