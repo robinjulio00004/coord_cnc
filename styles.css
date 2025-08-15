@@ -47,3 +47,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+#div2{
+      padding: 20px;
+	    text-align: center;
+      }
