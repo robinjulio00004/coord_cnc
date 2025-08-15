@@ -109,10 +109,13 @@
 			{
 				ctx.reset();
 				ctx.beginPath();
-				ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);
+				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
+				ctx.moveTo(dx,dy);
+				this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
 			}
 	</script>
 </html>
+
 
 
 
