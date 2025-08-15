@@ -7,10 +7,10 @@ body{
 #micanvas{
       position: absolute;
       border: 1px solid red;
-      /*margin:0px;*/
+      margin:0px;
       width: 200px;
       height: 200px;
-      z-index: 9999;
+      z-index: 8;
       }
 .fmsg {
       position: absolute;
@@ -47,6 +47,7 @@ body{
       box-sizing: content-box;
       z-index: 9;
       }
+
 
 
 
