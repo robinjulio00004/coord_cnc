@@ -114,8 +114,8 @@
 					ctx.strokeStyle="cyan";
 					ctx.stroke();
 		},
-				offtouch: function () {
-					if (navigator.maxTouchPoints < 0)
+				offtouch: function (evt) {
+					if (navigator.maxTouchPoints > 0)
 					{
       					hactiva = true;
 						document.getElementById("msg").innerHTML = hactiva;
@@ -136,6 +136,7 @@
 			
 	</script>
 </html>
+
 
 
 
