@@ -137,14 +137,14 @@
 			{
 				hta=true;
 				document.getElementById("msg").innerHTML = hta;
-			setTimeout(()=>{},1000);/*retardo de 250ms*/
 			document.getElementById("button2").value="Hta ON";
-			setTimeout(()=>{},1000);/*retardo de 250ms*/
+			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 250ms*/
 			//setTimeout(function() {},1000);/*retardo de 500ms*/
-			document.getElementById("button2").value="Hta OFF";
+			
 			}
 	</script>
 </html>
+
 
 
 
