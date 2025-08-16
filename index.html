@@ -64,6 +64,8 @@
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
         },
         		onTouchMove: function (evt) {
+									hactiva++;
+				document.getElementById("msg").innerHTML = hactiva;
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			const scale = 0.006;
 			var xt = (evt.touches[0].clientX-window.innerWidth/2)*scale;
@@ -95,8 +97,6 @@
 					this.el.object3D.position.set(xt, yt, 0);
         },
 				onTouchEnd: function (evt) {
-					hactiva++;
-				document.getElementById("msg").innerHTML = hactiva;
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(hactiva===true)
 					{
@@ -128,6 +128,7 @@
 			}
 	</script>
 </html>
+
 
 
 
