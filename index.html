@@ -104,7 +104,15 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(csist===true)
 					{
-			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
+			
+					if(asist===true)
+					{
+						document.getElementById("msg").innerHTML=asist;
+					}
+						else{
+							stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
+						}
+			
 					csist=false;
 			//document.getElementById("msg").innerHTML=csist;
 					}
@@ -160,7 +168,7 @@
 			{
 				csist=true;
 				esist=!esist;
-			document.getElementById("msg").innerHTML=esist;
+			//document.getElementById("msg").innerHTML=asist;
 				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
@@ -169,10 +177,12 @@
 				{
 			document.getElementById("button3").value="Absolutas";
 				asist=true;
+			document.getElementById("msg").innerHTML=asist;
 				}
 			}
 	</script>
 </html>
+
 
 
 
