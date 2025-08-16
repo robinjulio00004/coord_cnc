@@ -75,10 +75,13 @@ body{
 
 input[type='submit']{ /*botones*/
 	  display: flex;
+	  justify-content: center; /* Centers horizontally */
+      align-items: start; /* Centers vertically */
 	  /*align-items: center;*/
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
 }
+
 
 
 
