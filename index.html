@@ -118,6 +118,7 @@
 					if (navigator.maxTouchPoints < 0)
 					{
       					hactiva = true;
+						document.getElementById("msg").innerHTML = hactiva;
     				}
 				}
 				
@@ -129,12 +130,13 @@
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
 				//hactiva = true;
-				document.getElementById("msg").innerHTML = hactiva;
+				//document.getElementById("msg").innerHTML = hactiva;
 				//this.el.object3D.position.set(0, 0.5, 0);
 			}
 			
 	</script>
 </html>
+
 
 
 
