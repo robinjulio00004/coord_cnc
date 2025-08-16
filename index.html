@@ -62,7 +62,6 @@
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
-			this.el.sceneEl.addEventListener('notouch', this.offtouch.bind(this));
         },
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -129,6 +128,7 @@
 				document.getElementById("msg").innerHTML = hactiva;
 	</script>
 </html>
+
 
 
 
