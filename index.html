@@ -115,9 +115,13 @@
 			stexto[i]= "N0"+((i+1)*10)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
 					hta=false;
 					}
+					else if(esist===false)
+					{
+			stexto[i]= "N0"+((i+1)*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
+					}
 					else
 					{
-			stexto[i]= "N0"+((i+1)*10)+"G90 X"+coordx+" Y"+coordy+" <br>";
+			stexto[i]= "N0"+((i+1)*10)+" X"+coordx+" Y"+coordy+" <br>";
 					}
 					}
 			stexto[i+1]="N0"+((i+2)*10)+" M30<br>%";
@@ -166,5 +170,6 @@
 			}
 	</script>
 </html>
+
 
 
