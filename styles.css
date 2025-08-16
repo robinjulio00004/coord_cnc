@@ -49,6 +49,7 @@ body{
       }
 #botones{
 	  position: absolute;
+	  display: flex;
 	  transform: rotate(90deg);
 	  margin:0px;
 	  width: 150px;
@@ -81,6 +82,7 @@ input[type='submit']{ /*botones*/
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
 }
+
 
 
 
