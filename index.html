@@ -51,7 +51,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,ehta=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -137,15 +137,8 @@
 			{
 				hta=true;
 				document.getElementById("msg").innerHTML = hta;
-				ehta=!ehta;
-				if(ehta==true)
-				{
-					document.getElementById("button2").value = "Hta ON";
-				}
-				else
-				{
-					document.getElementById("button2").value = "Hta OFF";
-				}
+				setTimeout(()=>{},500);/*retardo de 500ms*/
 			}
 	</script>
 </html>
+
