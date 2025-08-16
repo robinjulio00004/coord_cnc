@@ -78,11 +78,12 @@ body{
 	  background-color: rgba(128,128,128,0.055);
 	  }
 #button1{
-      top: 0;
+      top: 5px;
 	  }
 #button2{
-      top: 25px;
+      top: 30px;
 	  }
 #button3{
-      top: 50px;
+      top: 55px;
 	  }
+
