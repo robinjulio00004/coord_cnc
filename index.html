@@ -136,11 +136,20 @@
 
 		function function_hta()
 			{
-				hta=true;
-				document.getElementById("button2").value="Hta ON";
+				hta=!hta;
+				if(hta===true)
+				{
+					document.getElementById("button2").value="Hta ON";
+				}
+				else
+				{
+					document.getElementById("button2").value="Hta OFF";
+				}
+				
 			}
 	</script>
 </html>
+
 
 
 
