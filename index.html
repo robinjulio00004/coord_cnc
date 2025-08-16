@@ -51,7 +51,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,csist=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,csist=false,asist=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -117,7 +117,15 @@
 					}
 					else
 					{
+					if(asist===true)
+					{
+			stexto[i]= "N0"+((i+1)*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
+					asist=false;
+					}
+					else
+					{
 			stexto[i]= "N0"+((i+1)*10)+" X"+coordx+" Y"+coordy+" <br>";
+					}
 					}
 					}
 			stexto[i+1]="N0"+((i+2)*10)+" M30<br>%";
@@ -156,16 +164,16 @@
 				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
-				 coordx=0;
-				 coordy=0;
 				}
 				else
 				{
 			document.getElementById("button3").value="Absolutas";
+				asist=true;
 				}
 			}
 	</script>
 </html>
+
 
 
 
