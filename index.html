@@ -62,9 +62,9 @@
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
-			this.el.sceneEl.addEventListener('contador',this.conteo.bind(this));
+			//this.el.sceneEl.addEventListener('contador',this.conteo.bind(this));
         },
-				conteo: function () {
+				tick: function () {
     				hactiva++;
 			document.getElementById("msg").innerHTML = hactiva;
   				},
@@ -132,6 +132,7 @@
 			}
 	</script>
 </html>
+
 
 
 
