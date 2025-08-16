@@ -104,8 +104,7 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(hta===true)
 					{
-			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
-			//document.getElementById("clineas").innerHTML = stexto[i];
+			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
 					hta=false;
 			document.getElementById("msg").innerHTML = hta;
 					}
@@ -146,4 +145,5 @@
 			}
 	</script>
 </html>
+
 
