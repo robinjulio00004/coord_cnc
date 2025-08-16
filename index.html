@@ -124,13 +124,14 @@
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
 				hactiva = true;
-				stexto=" ";
+				stexto="";
 				document.getElementById("clineas").innerHTML = stexto;
 				stexto[0]= "N01 G00 G90 G54 X0. Y0. Z1.<br>";
-				document.getElementById("clineas").innerHTML = stexto[0];
+				document.getElementById("clineas").innerHTML = stexto[0].join("");
 			}
 	</script>
 </html>
+
 
 
 
