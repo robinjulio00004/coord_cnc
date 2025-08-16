@@ -52,7 +52,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -106,8 +106,7 @@
 					if(hta===true)
 					{
 			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
-					//hta=false;
-			//document.getElementById("msg").innerHTML = hta;
+					hta=false;
 					}
 					else
 					{
@@ -138,15 +137,14 @@
 			}
 		function function_hta()
 			{
-				//hta=true;
-			//document.getElementById("msg").innerHTML = hta;
+				hta=true;
 			document.getElementById("button2").value="Hta ON";
 			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
 			}
 		function coordenadas()
 			{
-				hta=!hta;
-				if(hta===true)
+				esist=!esist;
+				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
 				}
@@ -154,6 +152,7 @@
 			}
 	</script>
 </html>
+
 
 
 
