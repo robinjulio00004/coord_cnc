@@ -51,7 +51,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,csist=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -102,16 +102,27 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+					if(csist===true)
+					{
+			stexto[i]= "N0"+(i+1*10)+" G90<br>";
+						csist=false;
+			document.getElementById("msg").innerHTML=csist;
+					//i++;
+					}
+					else
+					{
+						
+					}
 					if(hta===true)
 					{
-			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
+			stexto[i]= "N0"+(i+1*10)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
 					hta=false;
 					}
 					else
 					{
-			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
+			stexto[i]= "N0"+(i+1*10)+" X"+coordx+" Y"+coordy+" <br>";
 					}
-			stexto[i+1]="N0"+(i+2)+" M30<br>%";
+			stexto[i+1]="N0"+(i+2*10)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
 			document.getElementById("clineas").innerHTML = stexto[i+1];
 			document.getElementById("clineas").innerHTML = stexto.join("");
@@ -141,8 +152,9 @@
 			}
 		function coordenadas()
 			{
+				csist=true;
 				esist=!esist;
-			document.getElementById("msg").innerHTML=esist;
+			//document.getElementById("msg").innerHTML=esist;
 				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
@@ -154,4 +166,5 @@
 			}
 	</script>
 </html>
+
 
