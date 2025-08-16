@@ -51,7 +51,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,csist=false,asist=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,isist=false,asist=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -102,10 +102,10 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					if(csist===true)
+					if(isist===true)
 					{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
-					csist=false;
+					isist=false;
 					}
 					else
 					{
@@ -162,25 +162,15 @@
 				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
-				csist=true;
+				isist=true;
 				asist=false;
 				}
 				else
 				{
 			document.getElementById("button3").value="Absolutas";
 				asist=true;
-				csist=false;
-			document.getElementById("msg").innerHTML=asist;
+				isist=false;
 				}
 			}
 	</script>
 </html>
-
-
-
-
-
-
-
-
-
