@@ -62,6 +62,7 @@
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
+			this.el.sceneEl.addEventListener('notouch', this.offtouch.bind(this));
         },
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -98,7 +99,7 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(hactiva===true)
 					{
-						//this.el.object3D.position.set(0, 0.5, 0);
+						this.el.object3D.position.set(0, 0.5, 0);
 						//this.el.setAttribute('position', {x: 0, y: 0, z: 0});
 						hactiva = false;
 					}
@@ -113,21 +114,27 @@
 					ctx.strokeStyle="cyan";
 					ctx.stroke();
 		},
+				offtouch: function () {
+					if (navigator.maxTouchPoints < 0)
+					{
+      					hactiva = true;
+    				}
+				}
 				
-      	})
+      	});
 				function restablecer()
 			{
 				ctx.reset();
 				ctx.beginPath();
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
-				hactiva = true;
+				//hactiva = true;
 				document.getElementById("msg").innerHTML = hactiva;
-				this.el.object3D.position.set(0, 0.5, 0);
+				//this.el.object3D.position.set(0, 0.5, 0);
 			}
-				;
 			
 	</script>
 </html>
+
 
 
