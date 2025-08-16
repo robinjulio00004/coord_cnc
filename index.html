@@ -16,6 +16,7 @@
 	<div id="botones">
         <input id="button1" type="submit" class="button" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
 		<input id="button2" type="submit" class="button" value="Hta OFF" onClick="function_hta()"> <!-- herramienta-->
+		<input id="button3" type="submit" class="button" value="Absolutas" onClick="coordenadas()"> <!-- Sist. coordenadas-->
 		<div id="msg"></div>
     </div>
 	<!-- Valores de salida -->
@@ -105,8 +106,8 @@
 					if(hta===true)
 					{
 			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
-					hta=false;
-			document.getElementById("msg").innerHTML = hta;
+					//hta=false;
+			//document.getElementById("msg").innerHTML = hta;
 					}
 					else
 					{
@@ -135,16 +136,25 @@
 				stexto[0]= "N01 G00 G21 G90 G54 X0. Y0. Z1.<br>";
 				i=1;
 			}
-
 		function function_hta()
 			{
-				hta=true;
-			document.getElementById("msg").innerHTML = hta;
+				//hta=true;
+			//document.getElementById("msg").innerHTML = hta;
 			document.getElementById("button2").value="Hta ON";
 			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
 			}
+		function coordenadas()
+			{
+				hta=!hta;
+				if(hta===true)
+				{
+			document.getElementById("button3").value="Incrementales";
+				}
+			document.getElementById("button3").value="Absolutas";
+			}
 	</script>
 </html>
+
 
 
 
