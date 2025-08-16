@@ -51,7 +51,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false,esist=false,isist=false,asist=false, stexto = new Array();
+			let i=1,coordx=0,coordy=0,acoordx=0,acoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -93,9 +93,11 @@
 				{
 					yt=-0.8;
 				}
-					coordx=-yt+0.5;
-					coordx=coordx.toFixed(1)*5;
-					coordy=xt*5;
+					acoordx=-yt+0.5;
+					acoordx=acoordx.toFixed(1)*5;
+					acoordy=xt*5;
+					coordx=acoordx;
+					ccordy=acoordy;
 			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
 					this.el.object3D.position.set(xt, yt, 0);
@@ -174,3 +176,4 @@
 			}
 	</script>
 </html>
+
