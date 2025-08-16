@@ -93,19 +93,12 @@
 				{
 					yt=-0.8;
 				}
-					acoordx=-yt+0.5;
-					acoordx=acoordx.toFixed(1)*5;
-					acoordy=xt*5;
-
-				if(isist===true)
-				{
-				document.getElementById("msg").innerHTML=isist;
-				}
-				else
-				{
-					coordx=acoordx;
-					ccordy=acoordy;
-				}
+				acoordx=-yt+0.5;
+				acoordx=acoordx.toFixed(1)*5;
+				acoordy=xt*5;
+				//document.getElementById("msg").innerHTML=isist;
+				coordx=acoordx;
+				ccordy=acoordy;
 			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
 					this.el.object3D.position.set(xt, yt, 0);
@@ -184,5 +177,6 @@
 			}
 	</script>
 </html>
+
 
 
