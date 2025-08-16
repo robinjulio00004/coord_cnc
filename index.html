@@ -69,12 +69,11 @@
 			this.el.object3D.position.set(0, 0.5, 0);
 			etool = false;
 				}
-				//if(hta===true)
-				//{
-			//stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
-			//hta=false;
-			//document.getElementById("msg").innerHTML = hta;
-				//}	
+				if(hta===true)
+				{
+			setTimeout(function() {	hta=false;
+			document.getElementById("msg").innerHTML = hta;},1000);/*retardo de 1000ms*/
+				}	
   		},
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -138,12 +137,13 @@
 				hta=true;
 				document.getElementById("msg").innerHTML = hta;
 			document.getElementById("button2").value="Hta ON";
-			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 250ms*/
+			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
 			//setTimeout(function() {},1000);/*retardo de 500ms*/
-			
+			//stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
 			}
 	</script>
 </html>
+
 
 
 
