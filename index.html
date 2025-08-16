@@ -139,10 +139,11 @@
 			document.getElementById("button2").value="Hta ON";
 			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
 			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
-			document.getElementById("clineas").innerHTML = stexto[i];
+			document.getElementById("clineas").innerHTML = stexto[i].join("");
 			}
 	</script>
 </html>
+
 
 
 
