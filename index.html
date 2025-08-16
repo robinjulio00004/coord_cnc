@@ -71,8 +71,8 @@
 				}
 				if(hta===true)
 				{
-			setTimeout(function() {	hta=false;
-			document.getElementById("msg").innerHTML = hta;},1000);/*retardo de 1000ms*/
+			//setTimeout(function() {	hta=false;
+			//document.getElementById("msg").innerHTML = hta;},1000);/*retardo de 1000ms*/
 				}	
   		},
         		onTouchMove: function (evt) {
@@ -107,6 +107,11 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+					if(hta===true)
+					{
+			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
+					hta=false;
+					}
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			stexto[i+1]="N0"+(i+2)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
@@ -138,11 +143,12 @@
 			document.getElementById("msg").innerHTML = hta;
 			document.getElementById("button2").value="Hta ON";
 			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
-			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
-			document.getElementById("clineas").innerHTML = stexto[i].join("");
+			//stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
+			//document.getElementById("clineas").innerHTML = stexto[i].join("");
 			}
 	</script>
 </html>
+
 
 
 
