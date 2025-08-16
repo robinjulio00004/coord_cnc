@@ -80,14 +80,15 @@ body{
 	  background-color: rgba(128,128,128,0.055);
 }
 
-#button2{ /*botones*/
+/*#button2{ /*botones
 	  position: absolute;
       top: 25px;
       left: 50%;
       transform: translateX(-50%);
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
-}
+}*/
+
 
 
 
