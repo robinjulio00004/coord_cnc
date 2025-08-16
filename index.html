@@ -50,7 +50,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva=0, stexto = new Array();
+			let i=1,j=0, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const hcorte = document.getElementById("tool");
 			const ctx = canvas.getContext("2d");	
@@ -62,13 +62,14 @@
         		init: function () {
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
-			//this.el.sceneEl.addEventListener('contador',this.conteo.bind(this));
         },
 				tick: function () {
-    				hactiva++;
-			document.getElementById("msg").innerHTML = hactiva;
-  				},
-
+    			if(hactiva===true)
+				{
+			j++;
+			document.getElementById("msg").innerHTML = j;
+				}
+  		},
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			const scale = 0.006;
@@ -97,17 +98,10 @@
 					coordy=xt*5;
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
-			//document.getElementById("msg").innerHTML = hactiva;
 					this.el.object3D.position.set(xt, yt, 0);
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					if(hactiva===true)
-					{
-						//this.el.object3D.position.set(0, 0.5, 0);
-						//this.el.setAttribute('position', {x: 0, y: 0, z: 0});
-						//hactiva = false;
-					}
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			stexto[i+1]="N0"+(i+2)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
@@ -126,12 +120,14 @@
 				ctx.beginPath();
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
-				//hactiva = true;
+				hactiva = true;
 				//document.getElementById("msg").innerHTML = hactiva;
 				//this.el.object3D.position.set(0, 0.5, 0);
+				//this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
 			}
 	</script>
 </html>
+
 
 
 
