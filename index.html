@@ -104,14 +104,14 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(csist===true)
 					{
-			stexto[i]= "N0"+(i+1*10)+" G90<br>";
+			stexto[i]= "N0"+(i+1*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
 						csist=false;
 			document.getElementById("msg").innerHTML=csist;
 					//i++;
 					}
 					else
 					{
-						
+			stexto[i]= "N0"+(i+1*10)+" X"+coordx+" Y"+coordy+" <br>";
 					}
 					if(hta===true)
 					{
@@ -154,6 +154,7 @@
 			{
 				csist=true;
 				esist=!esist;
+			document.getElementById("msg").innerHTML=csist;
 			//document.getElementById("msg").innerHTML=esist;
 				if(esist===true)
 				{
@@ -166,5 +167,6 @@
 			}
 	</script>
 </html>
+
 
 
