@@ -12,7 +12,7 @@ body{
       width: 95%;
       height: 95%;
       }
-.fmsg {
+.fmsg{
       position: absolute;
       margin-bottom: 20px;
       top: 10px;
@@ -70,45 +70,27 @@ body{
 	  border: 1px solid red;
 	  z-index: 9
       }
-
-#button1{ /*botones*/
+#button1{
 	  position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
-}
-
-#button2{ /*botones*/
+	  }
+#button2{
 	  position: absolute;
       top: 25px;
       left: 50%;
       transform: translateX(-50%);
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	  }
+#button3{
+	  position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+	  color: green;
+	  background-color: rgba(128,128,128,0.055);
+	  }
