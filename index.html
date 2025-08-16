@@ -105,6 +105,10 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+					if(i==1)
+					{
+			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" <br>";
+					}
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			stexto[i+1]="N0"+(i+2)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
@@ -131,6 +135,7 @@
 			}
 	</script>
 </html>
+
 
 
 
