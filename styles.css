@@ -54,7 +54,7 @@ body{
 	  width: 150px;
       bottom: 60px;
 	  height: 80px;
-      left: -10px;
+      left: -20px;
       padding: 1px;
 	  text-align: left;
 	  border: 1px solid red;
@@ -71,16 +71,3 @@ body{
 	  border: 1px solid red;
 	  z-index: 9
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
