@@ -69,6 +69,13 @@
 			this.el.object3D.position.set(0, 0.5, 0);
 			etool = false;
 				}
+				if(hta===true)
+				{
+			stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
+			document.getElementById("button2").value="Hta ON";
+			hta=false;
+				}
+					//document.getElementById("button2").value="Hta OFF";
   		},
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -102,7 +109,7 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" <br>";
+			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			stexto[i]= "N0"+(i+1)+" X"+coordx+" Y"+coordy+" <br>";
 			stexto[i+1]="N0"+(i+2)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
@@ -130,24 +137,8 @@
 
 		function function_hta()
 			{
-				hta=!hta;
+				hta=true;
 				document.getElementById("msg").innerHTML = hta;
-				if(hta===true)
-				{
-					document.getElementById("button2").value="Hta ON";
-				}
-				else
-				{
-					document.getElementById("button2").value="Hta OFF";
-				}
-				
 			}
 	</script>
 </html>
-
-
-
-
-
-
-
