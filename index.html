@@ -104,7 +104,7 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(csist===true)
 					{
-			stexto[i]= "N0"+((i+1)*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
+			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
 					csist=false;
 			//document.getElementById("msg").innerHTML=csist;
 					}
@@ -117,7 +117,7 @@
 					}
 					else
 					{
-			stexto[i]= "N0"+((i+1)*10)+" X"+coordx+" Y"+coordy+" <br>";
+			stexto[i]= "N0"+((i+1)*10)+"G90 X"+coordx+" Y"+coordy+" <br>";
 					}
 					}
 			stexto[i+1]="N0"+((i+2)*10)+" M30<br>%";
@@ -166,4 +166,5 @@
 			}
 	</script>
 </html>
+
 
