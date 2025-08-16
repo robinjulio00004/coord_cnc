@@ -50,7 +50,7 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva=0, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
 			const hcorte = document.getElementById("tool");
 			const ctx = canvas.getContext("2d");	
@@ -92,7 +92,7 @@
 					coordy=xt*5;
 			document.getElementById('cx').textContent = xt; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = yt; // Y-coordinate virtual axis
-			document.getElementById("msg").innerHTML = hactiva;
+			//document.getElementById("msg").innerHTML = hactiva;
 					this.el.object3D.position.set(xt, yt, 0);
         },
 				onTouchEnd: function (evt) {
@@ -113,15 +113,7 @@
 					ctx.lineWidth=1;
 					ctx.strokeStyle="cyan";
 					ctx.stroke();
-		},
-				offtouch: function (evt) {
-					if (navigator.maxTouchPoints > 0)
-					{
-      					hactiva = true;
-						document.getElementById("msg").innerHTML = hactiva;
-    				}
-				}
-				
+		},				
       	});
 				function restablecer()
 			{
@@ -133,9 +125,11 @@
 				//document.getElementById("msg").innerHTML = hactiva;
 				//this.el.object3D.position.set(0, 0.5, 0);
 			}
-			
+						hactiva++;
+				document.getElementById("msg").innerHTML = hactiva;
 	</script>
 </html>
+
 
 
 
