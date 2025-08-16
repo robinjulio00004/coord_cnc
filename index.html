@@ -76,7 +76,12 @@
 			hta=false;
 			document.getElementById("msg").innerHTML = hta;
 				}
-					//document.getElementById("button2").value="Hta OFF";
+				else
+				{
+			document.getElementById("button2").value="Hta OFF";
+			document.getElementById("msg").innerHTML = hta;
+				}
+					
   		},
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
@@ -137,11 +142,12 @@
 
 		function function_hta()
 			{
-				hta=true;
+				hta=!hta;
 				document.getElementById("msg").innerHTML = hta;
 			}
 	</script>
 </html>
+
 
 
 
