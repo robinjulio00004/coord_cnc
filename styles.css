@@ -72,14 +72,14 @@ body{
       }
 
 input[type='submit']{ /*botones*/
-	  /*display: flex;*/
 	  position: absolute;
-      top: 0; /* Aligns to the top */
-      left: 50%; /* Moves the left edge to the horizontal center */
-      transform: translateX(-50%); /* Adjusts for
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
 }
+
 
 
 
