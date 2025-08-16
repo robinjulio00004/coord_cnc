@@ -106,11 +106,10 @@
 					{
 			stexto[i]= "N0"+(i*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
 					csist=false;
-			document.getElementById("msg").innerHTML=csist;
+			//document.getElementById("msg").innerHTML=csist;
 					}
 					else
 					{
-			//stexto[i]= "N0"+(i*10)+" X"+coordx+" Y"+coordy+" <br>";
 					if(hta===true)
 					{
 			stexto[i]= "N0"+(i*10)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
@@ -121,7 +120,7 @@
 			stexto[i]= "N0"+(i*10)+" X"+coordx+" Y"+coordy+" <br>";
 					}
 					}
-			stexto[i+1]="N0"+(i*10)+" M30<br>%";
+			stexto[i+1]="N0"+(i*20)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
 			document.getElementById("clineas").innerHTML = stexto[i+1];
 			document.getElementById("clineas").innerHTML = stexto.join("");
@@ -153,11 +152,12 @@
 			{
 				csist=true;
 				esist=!esist;
-			document.getElementById("msg").innerHTML=csist;
-			//document.getElementById("msg").innerHTML=esist;
+			document.getElementById("msg").innerHTML=esist;
 				if(esist===true)
 				{
 			document.getElementById("button3").value="Incrementales";
+				 coordx=0;
+				 coordy=0;
 				}
 				else
 				{
@@ -166,7 +166,3 @@
 			}
 	</script>
 </html>
-
-
-
-
