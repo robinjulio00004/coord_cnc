@@ -14,7 +14,8 @@
 	<canvas id="micanvas"></canvas>
 	<!-- Botones -->
 	<div id="botones">
-        <input id="button1" type="submit" class="reset" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
+        <input id="button1" type="submit" class="button" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
+		<input id="button2" type="submit" class="button" value="Hta OFF" onClick="hta()"> <!-- herramienta-->
 		<div id="msg"></div>
     </div>
 	<!-- Valores de salida -->
@@ -50,9 +51,8 @@
 </body>
 
 	<script>
-			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,hactiva=false, stexto = new Array();
+			let i=1, coordx=0, coordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false, hta=false, stexto = new Array();
 			const canvas = document.getElementById("micanvas");
-			const hcorte = document.getElementById("tool");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
 			ctx.moveTo(dx,dy);
@@ -64,11 +64,11 @@
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
         },
 				tick: function () {
-    			if(hactiva===true)
+    			if(etool===true)
 				{
 			this.el.object3D.position.set(0, 0.5, 0);
 			//this.el.setAttribute('position', {x: 0, y: 0.5, z: 0});
-			hactiva = false;
+			etool = false;
 			document.getElementById("msg").innerHTML = hactiva;
 				}
 			document.getElementById("msg").innerHTML = hactiva;
@@ -105,7 +105,7 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					if(i==1)
+					if(i==2)
 					{
 			stexto[i]= "N0"+(i+1)+" G01 X"+coordx+" Y"+coordy+" <br>";
 					}
@@ -127,11 +127,18 @@
 				ctx.beginPath();
 				//ctx.moveTo(dx+coordy*fescalay,dy+coordx*fescalax);//incrementales
 				ctx.moveTo(dx,dy);
-				hactiva = true;
+				etool = true;
 				stexto=[];
 				document.getElementById("clineas").innerHTML = stexto;
 				stexto[0]= "N01 G00 G21 G90 G54 X0. Y0. Z1.<br>";
 				i=1;
 			}
+
+		function hta()
+			{
+				hta=true;
+				document.getElementById("button2").value="Hta ON";
+			}
 	</script>
 </html>
+
