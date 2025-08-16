@@ -63,8 +63,11 @@
           	this.el.sceneEl.addEventListener('touchmove', this.onTouchMove.bind(this));
 			this.el.sceneEl.addEventListener('touchend', this.onTouchEnd.bind(this));
         },
-				hactiva++;
+				conteo: function () {
+    				hactiva++;
 			document.getElementById("msg").innerHTML = hactiva;
+  				},
+
         		onTouchMove: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 			const scale = 0.006;
@@ -128,6 +131,7 @@
 			}
 	</script>
 </html>
+
 
 
 
