@@ -66,15 +66,11 @@
 				tick: function () {
     			if(etool===true)
 				{
-			setTimeout(()=>{},1000);/*retardo de 500ms*/
 			this.el.object3D.position.set(0, 0.5, 0);
 			etool = false;
 				}
 				if(hta===true)
 				{
-			document.getElementById("button2").value="Hta ON";
-			setTimeout(()=>{},1000);/*retardo de 500ms*/
-			document.getElementById("button2").value="Hta OFF";
 			//stexto[i]= "N0"+(i+1)+"G01 X"+coordx+" Y"+coordy+" <br>";
 			hta=false;
 			document.getElementById("msg").innerHTML = hta;
@@ -141,9 +137,14 @@
 			{
 				hta=true;
 				document.getElementById("msg").innerHTML = hta;
+			setTimeout(()=>{},1000);/*retardo de 500ms*/
+			document.getElementById("button2").value="Hta ON";
+			setTimeout(()=>{},1000);/*retardo de 500ms*/
+			document.getElementById("button2").value="Hta OFF";
 			}
 	</script>
 </html>
+
 
 
 
