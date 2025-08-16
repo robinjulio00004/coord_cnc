@@ -58,8 +58,6 @@ body{
       left: -20px;
       padding: 1px;
 	  text-align: left;
-	  /*justify-content: center;*/
-	  align-items: center;
 	  border: 1px solid red;
 	  z-index: 9
       }
@@ -76,10 +74,11 @@ body{
       }
 
 input[type='submit']{ /*botones*/
-	/*align-items: center;*/
+	align-items: center;
 	  color: green;
 	  background-color: rgba(128,128,128,0.055);
 }
+
 
 
 
