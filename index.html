@@ -99,14 +99,14 @@
 					if(sist===true)
 					{
 			document.getElementById("msg").innerHTML=sist;
-				//scoord[0]=acoordx;
-				//scoord[2]=scoord[0];
-				//scoord[1]=acoordy;
-				//scoord[3]=scoord[1];
-				//coordx= scoord[2];
-				//coordy= scoord[3];
-				acoordx+=acoordx;
-				acoordy+=acoordy;
+				scoord[0]=acoordx;
+				scoord[2]=scoord[0];
+				scoord[1]=acoordy;
+				scoord[3]=scoord[1];
+				coordx= scoord[2];
+				coordy= scoord[3];
+				coordx=scoord[2]-acoordx;
+				coordy=scoord[3]-acoordy;
 					}
 					else
 					{
@@ -193,6 +193,7 @@
 			}
 	</script>
 </html>
+
 
 
 
