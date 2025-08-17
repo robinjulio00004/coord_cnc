@@ -93,6 +93,17 @@ body{
 	  border: 1px solid red;
 	  z-index: 9
       }
+#msg4{
+	  position: absolute;
+	  margin:0px;
+	  top: 60px;
+	  width: 15px;
+	  height: 15px;
+	  color: white;
+	  text-align: left;
+	  border: 1px solid red;
+	  z-index: 9
+      }
 .button{
 	  position: absolute;
 	  left: 50%;
@@ -109,6 +120,7 @@ body{
 #button3{
       top: 65px;
 	  }
+
 
 
 
