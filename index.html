@@ -111,15 +111,21 @@
 				{
 				j=0;
 				}
+				if(scoord[1]==0 && scoord[3]==0)
+				{
+					coordx=scoord[0];
+					coordy=scoord[2];
+				}
 				scoord[j]=coordx;
 				scoord[j+2]=coordy;
 				coordx=scoord[1]-scoord[0];
 				coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
-						if(scoord[0]<scoord[1])
+						
+						 if(scoord[0]<scoord[1])
 						{
 							coordx=Math.abs(coordx);
 						}
-						else if(scoord[2]<scoord[3])
+						 if(scoord[2]<scoord[3])
 						{
 							coordy=Math.abs(coordy);
 						}
@@ -207,6 +213,7 @@
 			}
 	</script>
 </html>
+
 
 
 
