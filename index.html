@@ -51,7 +51,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1,coordx=0,coordy=0,acoordx=0,acoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array();
+			let i=1,coordx=0,coordy=0,acoordx=0,acoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array(),scoord = new Array();
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -98,7 +98,13 @@
 				acoordy=xt*5;
 					if(sist===true)
 					{
-				document.getElementById("msg").innerHTML=sist;
+			document.getElementById("msg").innerHTML=sist;
+				scoord[0]=acoordx;
+				scoord[2]=scoord[0];
+				scoord[1]=acoordy;
+				scoord[3]=scoord[1];
+				coordx= scoord[2];
+				coordy= scoord[3];
 					}
 					else
 					{
@@ -185,6 +191,7 @@
 			}
 	</script>
 </html>
+
 
 
 
