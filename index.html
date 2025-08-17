@@ -93,32 +93,25 @@
 				{
 					yt=-0.8;
 				}
-				acoordx=-yt+0.5;
-				acoordx=acoordx.toFixed(1)*5;
-				acoordy=xt*5;
-					if(sist===true)
-					{
-			document.getElementById("msg").innerHTML=sist;
-				//scoord[j]=acoordx;
-				//scoord[1]=scoord[j];
-				//scoord[j+1]=acoordy;
-				//scoord[3]=scoord[j+1];
-     			coordx-=acoordx;//scoord[2]-scoord[j];
-     			coordy-=acoordy;//scoord[3]-scoord[j+1];
-				//j++;
-					}
-					else
-					{
-			document.getElementById("msg").innerHTML=sist;
-				coordx=acoordx;
-				coordy=acoordy;
-					}
+				coordx=-yt+0.5;
+				coordx=coordx.toFixed(1)*5;
+				coordy=xt*5;
 			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
 			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
 					this.el.object3D.position.set(xt, yt, 0);
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
+					if(sist===true)
+					{
+			document.getElementById("msg").innerHTML=sist;
+     			coordx-=acoordx;
+     			coordy-=acoordy;
+					}
+					else
+					{
+			document.getElementById("msg").innerHTML=sist;
+					}
 					if(isist===true)
 					{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
@@ -192,6 +185,7 @@
 			}
 	</script>
 </html>
+
 
 
 
