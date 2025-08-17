@@ -112,7 +112,7 @@
 				scoord[j]=coordx;
 				scoord[j+2]=coordy;
 				coordx=scoord[1]-scoord[0];
-				coordy=scoord[3]-scoord[2];
+				coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
 				j++;
 					}
 					else
@@ -162,7 +162,8 @@
 				ctx.moveTo(dx,dy);
 				etool = true;
 				stexto=[];
-				document.getElementById("clineas").innerHTML = stexto;
+				scoord=[];
+				//document.getElementById("clineas").innerHTML = stexto;
 				stexto[0]= "N10 G00 G21 G90 G54 X0. Y0. Z1.<br>";
 				i=1;
 			}
@@ -192,6 +193,7 @@
 			}
 	</script>
 </html>
+
 
 
 
