@@ -115,6 +115,14 @@
 				scoord[j+2]=coordy;
 				coordx=scoord[1]-scoord[0];
 				coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
+						if(scoord[0]<scoord[1])
+						{
+							coordx=Math.abs(coordx);
+						}
+						else if(scoord[2]<scoord[3])
+						{
+							coordy=Math.abs(coordy);
+						}
 				document.getElementById("msg1").innerHTML=coordx;
 				document.getElementById("msg2").innerHTML=coordy;
 				document.getElementById("msg3").innerHTML=j;
@@ -199,5 +207,6 @@
 			}
 	</script>
 </html>
+
 
 
