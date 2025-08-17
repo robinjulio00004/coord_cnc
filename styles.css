@@ -60,7 +60,7 @@ body{
 	  border: 1px solid red;
 	  z-index: 9
       }
-#msg{
+#msg1,#msg2{
 	  position: absolute;
 	  margin:0px;
 	  width: 15px;
@@ -86,5 +86,6 @@ body{
 #button3{
       top: 65px;
 	  }
+
 
 
