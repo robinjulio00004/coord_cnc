@@ -20,6 +20,7 @@
 		<div id="msg1"></div>
 		<div id="msg2"></div>
 		<div id="msg3"></div>
+		<div id="msg4"></div>
     </div>
 	<!-- Valores de salida -->
 	<div class="fmsg">
@@ -106,7 +107,6 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 					if(sist===true)
 					{
-			//document.getElementById("msg").innerHTML=sist;
 				if(j==2)
 				{
 				j=0;
@@ -114,7 +114,7 @@
 				scoord[j]=coordx;
 				scoord[j+2]=coordy;
 						
-				if(scoord[1]==0 && scoord[3]==0)
+				if(j==0 && scoord[1]==0 && scoord[3]==0)
 				{
 					coordx=scoord[0];
 					coordy=scoord[2];
@@ -124,17 +124,18 @@
 					coordx=scoord[1]-scoord[0];
 					coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
 				}
-				if(scoord[0]<scoord[1])
-				{
-					coordx=Math.abs(coordx);
-				}
-				if(scoord[2]<scoord[3])
-				{
-					coordy=Math.abs(coordy);
-				}
+				//if(scoord[0]<scoord[1])
+				//{
+					//coordx=Math.abs(coordx);
+				//}
+				//if(scoord[2]<scoord[3])
+				//{
+					//coordy=Math.abs(coordy);
+				//}
 				document.getElementById("msg1").innerHTML=coordx;
 				document.getElementById("msg2").innerHTML=coordy;
 				document.getElementById("msg3").innerHTML=scoord;
+				document.getElementById("msg4").innerHTML=j;
 				j++;
 					}
 					else
@@ -216,6 +217,7 @@
 			}
 	</script>
 </html>
+
 
 
 
