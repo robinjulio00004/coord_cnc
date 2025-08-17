@@ -17,7 +17,8 @@
         <input id="button1" type="submit" class="button" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
 		<input id="button2" type="submit" class="button" value="Hta OFF" onClick="function_hta()"> <!-- herramienta-->
 		<input id="button3" type="submit" class="button" value="Absolutas" onClick="coordenadas()"> <!-- Sist. coordenadas-->
-		<div id="msg"></div>
+		<div id="msg1"></div>
+		<div id="msg2"></div>
     </div>
 	<!-- Valores de salida -->
 	<div class="fmsg">
@@ -113,6 +114,8 @@
 				scoord[j+2]=coordy;
 				coordx=scoord[1]-scoord[0];
 				coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
+				document.getElementById("msg1").innerHTML=coordx;
+				document.getElementById("msg2").innerHTML=coordy;
 				j++;
 					}
 					else
@@ -193,6 +196,7 @@
 			}
 	</script>
 </html>
+
 
 
 
