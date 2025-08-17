@@ -124,15 +124,7 @@
 					coordx=scoord[1]-scoord[0];
 					coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
 				}
-				//if(scoord[0]<scoord[1])
-				//{
-					//coordx=Math.abs(coordx);
-				//}
-				//if(scoord[2]<scoord[3])
-				//{
-					//coordy=Math.abs(coordy);
-				//}
-				if(j==0)
+				if(j==0 && scoord[1]!== 0 && scoord[3]!== 0)
 				{
 					coordx=coordx*-1;
 					coordy=coordy*-1;
@@ -223,6 +215,7 @@
 			}
 	</script>
 </html>
+
 
 
 
