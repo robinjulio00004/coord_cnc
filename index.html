@@ -17,10 +17,6 @@
         <input id="button1" type="submit" class="button" value="Restablecer" onClick="restablecer()"> <!-- restablecer valores-->
 		<input id="button2" type="submit" class="button" value="Hta OFF" onClick="function_hta()"> <!-- herramienta-->
 		<input id="button3" type="submit" class="button" value="Absolutas" onClick="coordenadas()"> <!-- Sist. coordenadas-->
-		<div id="msg1"></div>
-		<div id="msg2"></div>
-		<div id="msg3"></div>
-		<div id="msg4"></div>
     </div>
 	<!-- Valores de salida -->
 	<div class="fmsg">
@@ -105,14 +101,14 @@
         },
 				onTouchEnd: function (evt) {
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
-					if(sist===true)
-					{
+				if(sist===true)
+				{
 				if(j==2)
 				{
 				j=0;
 				}
-				scoord[j]=coordx;
-				scoord[j+2]=coordy;
+					scoord[j]=coordx;
+					scoord[j+2]=coordy;
 						
 				if(scoord[1]==0 && scoord[3]==0)
 				{
@@ -122,48 +118,44 @@
 				else
 				{
 					coordx=scoord[1]-scoord[0];
-					coordy=scoord[3]-scoord[2];//ya funciona, falta verificar signos de coordenadas
+					coordy=scoord[3]-scoord[2];
 				}
 				if(j==0 && scoord[1]!== 0 && scoord[3]!== 0)
 				{
 					coordx=coordx*-1;
 					coordy=coordy*-1;
 				}
-				document.getElementById("msg1").innerHTML=coordx;
-				document.getElementById("msg2").innerHTML=coordy;
-				document.getElementById("msg3").innerHTML=scoord;
-				document.getElementById("msg4").innerHTML=j;
 				j++;
-					}
-					else
-					{
+				}
+				else
+				{
 			//document.getElementById("msg").innerHTML=sist;
-					}
-					if(isist===true)
-					{
+				}
+				if(isist===true)
+				{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
 					isist=false;
-					}
-					else
-					{
-					if(hta===true)
-					{
+				}
+				else
+				{
+				if(hta===true)
+				{
 			stexto[i]= "N0"+((i+1)*10)+" G01 X"+coordx+" Y"+coordy+" Z0. F500.<br>";
 					hta=false;
-					}
-					else
-					{
-					if(asist===true)
-					{
+				}
+				else
+				{
+				if(asist===true)
+				{
 			stexto[i]= "N0"+((i+1)*10)+" G90 X"+coordx+" Y"+coordy+" <br>";
 					asist=false;
-					}
-					else
-					{
+				}
+				else
+				{
 			stexto[i]= "N0"+((i+1)*10)+" X"+coordx+" Y"+coordy+" <br>";
-					}
-					}
-					}
+				}
+				}
+				}
 			stexto[i+1]="N0"+((i+2)*10)+" M30<br>%";
 			document.getElementById("clineas").innerHTML = stexto[i];
 			document.getElementById("clineas").innerHTML = stexto[i+1];
@@ -183,7 +175,7 @@
 				etool = true;
 				stexto=[];
 				scoord=[0,0,0,0];
-				document.getElementById("clineas").innerHTML = stexto;
+			document.getElementById("clineas").innerHTML = stexto;
 				stexto[0]= "N10 G00 G21 G90 G54 X0. Y0. Z1.<br>";
 				i=1;
 				j=1;
@@ -197,32 +189,21 @@
 		function coordenadas()
 			{
 				esist=!esist;
-				if(esist===true)
-				{
+			if(esist===true)
+			{
 			document.getElementById("button3").value="Incrementales";
 				isist=true;
 				asist=false;
 				sist=true;
 				scoord = [0,0,0,0];
-				}
-				else
-				{
+			}
+			else
+			{
 			document.getElementById("button3").value="Absolutas";
 				asist=true;
 				isist=false;
 				sist=false;
-				}
+			}
 			}
 	</script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
