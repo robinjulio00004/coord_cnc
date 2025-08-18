@@ -24,10 +24,10 @@
 	<p>Sistema <span id="ctexto">Absoluto</span></p>
 	</div>
  	 <div>
-	<p>coordenada X: <span id="cx">&nbsp;</span></p>
+	<p>Coord. abs. X: <span id="cx">&nbsp;</span></p>
 	 </div>
 	 <div>
-	<p>coordenada Y: <span id="cy"></span></p>
+	<p>Coord. abs. Y: <span id="cy"></span></p>
 	 </div>
 	</div>
  	 <div id="mcode">
@@ -53,7 +53,8 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1,j=0,coordx=0,coordy=0,icoordx=0,icoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array(),scoord = [0,0,0,0];
+			let i=1,j=0,coordx=0,coordy=0,icoordx=0,icoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0;
+		    let etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array(),scoord = [0,0,0,0];
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -98,8 +99,8 @@
 				coordx=-yt+0.5;
 				coordx=coordx.toFixed(1)*5;
 				coordy=xt*5;
-			document.getElementById('cx').textContent = coordx; // X-coordinate virtual axis
-			document.getElementById('cy').textContent = coordy; // Y-coordinate virtual axis
+			document.getElementById('cx').textContent = coordx;
+			document.getElementById('cy').textContent = coordy; 
 					this.el.object3D.position.set(xt, yt, 0);
         },
 				onTouchEnd: function (evt) {
@@ -131,7 +132,7 @@
 					icoordy=icoordy*-1;
 				}
 				j++;
-					if(isist===true)/***********************/
+					if(isist===true)
 				{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+icoordx+" Y"+icoordy+" <br>";
 					isist=false;
@@ -164,11 +165,11 @@
 					ctx.lineTo(dx+coordy*fescalay,dy+coordx*fescalax);
 					ctx.lineWidth=1;
 					ctx.strokeStyle="cyan";
-					ctx.stroke();/***********************/
+					ctx.stroke();
 				}
 				else
 				{
-			if(isist===true)/***********************/
+			if(isist===true)
 				{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
 					isist=false;
@@ -201,7 +202,7 @@
 					ctx.lineTo(dx+coordy*fescalay,dy+coordx*fescalax);
 					ctx.lineWidth=1;
 					ctx.strokeStyle="cyan";
-					ctx.stroke();/***********************/
+					ctx.stroke();
 				}
 		},				
       	});
@@ -247,7 +248,3 @@
 			}
 	</script>
 </html>
-
-
-
-
