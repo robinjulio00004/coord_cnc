@@ -21,7 +21,7 @@
 	<!-- Valores de salida -->
 	<div class="fmsg">
 	<div id="sistema">
-	<p>Sistema <span id="sistema">Absoluto</span></p>
+	<p>Sistema <span id="ctexto">Absoluto</span></p>
 	</div>
  	 <div>
 	<p>coordenada X: <span id="cx">&nbsp;</span></p>
@@ -229,24 +229,25 @@
 				esist=!esist;
 			if(esist===true)
 			{
+			document.getElementById("ctexto").textContent = "Incremental";
 			document.getElementById("button3").value="Incrementales";
 				isist=true;
 				asist=false;
 				sist=true;
 				scoord = [0,0,0,0];
-			document.getElementById("sistema").textContent = "Incremental";
 			}
 			else
 			{
+			document.getElementById("ctexto").textContent = "Absoluto";
 			document.getElementById("button3").value="Absolutas";
 				asist=true;
 				isist=false;
 				sist=false;
-			document.getElementById("sistema").textContent = "Absoluto";
 			}
 			}
 	</script>
 </html>
+
 
 
 
