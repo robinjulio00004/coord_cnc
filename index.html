@@ -41,12 +41,15 @@
 	<a-assets>
 	<img id="img1" src="coord_sist.png">
 	<img id="img2" src="cero_pieza.png">
+	<img id="img3" src="signo.png">
     <a-asset-item id="tool" src="cortador.glb"></a-asset-item>
   	</a-assets>
 
 	<a-image src="#img1" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
 	<a-image src="#img2" position="0 0.5 0" rotation="0 0 -90" width="0.25" height="0.25"></a-image>
-	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move></a-entity>
+	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move>
+	<a-image src="#img3" position="0 0.5 0" rotation="0 0 -90" width="0.25" height="0.25"></a-image>
+	</a-entity>
 		
 	<!-- Camera -->
 	<a-entity camera position="0 0 6" look-controls-enabled="false"></a-entity>
@@ -248,3 +251,4 @@
 			}
 	</script>
 </html>
+
