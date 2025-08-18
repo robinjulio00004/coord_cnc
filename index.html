@@ -20,6 +20,9 @@
     </div>
 	<!-- Valores de salida -->
 	<div class="fmsg">
+	<div id="sistema">
+	<p>Sistema <span id="sistema"></span></p>
+	</div>
  	 <div>
 	<p>coordenada X: <span id="cx">&nbsp;</span></p>
 	 </div>
@@ -196,6 +199,7 @@
 				asist=false;
 				sist=true;
 				scoord = [0,0,0,0];
+			document.getElementById("sistema").textContent = "Incremental";
 			}
 			else
 			{
@@ -203,7 +207,9 @@
 				asist=true;
 				isist=false;
 				sist=false;
+			document.getElementById("sistema").textContent = "Absoluto";
 			}
 			}
 	</script>
 </html>
+
