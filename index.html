@@ -53,7 +53,7 @@
 	</a-scene>
 </body>
 	<script>
-			let i=1,j=0,coordx=0,coordy=0,acoordx=0,acoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array(),scoord = [0,0,0,0];
+			let i=1,j=0,coordx=0,coordy=0,icoordx=0,icoordy=0,dx=158,dy=59,fescalax=6.6,fescalay=22,canvx=0,canvy=0,etool=false,hta=false,esist=false,isist=false,asist=false,sist=false,stexto = new Array(),scoord = [0,0,0,0];
 			const canvas = document.getElementById("micanvas");
 			const ctx = canvas.getContext("2d");	
 			ctx.beginPath();
@@ -106,35 +106,69 @@
 			evt.preventDefault(); // Prevent default browser behavior (e.g., scrolling)
 				if(sist===true)
 				{
+				icoordx=coordx;
+				icoordy=coordy;
 				if(j==2)
 				{
 				j=0;
 				}
-					scoord[j]=coordx;
-					scoord[j+2]=coordy;
+					scoord[j]=icoordx;
+					scoord[j+2]=icoordy;
 						
 				if(scoord[1]==0 && scoord[3]==0)
 				{
-					coordx=scoord[0];
-					coordy=scoord[2];
+					icoordx=scoord[0];
+					icoordy=scoord[2];
 				}
 				else
 				{
-					coordx=scoord[1]-scoord[0];
-					coordy=scoord[3]-scoord[2];
+					icoordx=scoord[1]-scoord[0];
+					icoordy=scoord[3]-scoord[2];
 				}
 				if(j==0 && scoord[1]!== 0 && scoord[3]!== 0)
 				{
-					coordx=coordx*-1;
-					coordy=coordy*-1;
+					icoordx=icoordx*-1;
+					icoordy=icoordy*-1;
 				}
 				j++;
+					if(isist===true)/***********************/
+				{
+			stexto[i]= "N0"+((i+1)*10)+" G91 X"+icoordx+" Y"+icoordy+" <br>";
+					isist=false;
 				}
 				else
 				{
-			//document.getElementById("msg").innerHTML=sist;
+				if(hta===true)
+				{
+			stexto[i]= "N0"+((i+1)*10)+" G01 X"+icoordx+" Y"+icoordy+" Z0. F500.<br>";
+					hta=false;
 				}
-				if(isist===true)
+				else
+				{
+				if(asist===true)
+				{
+			stexto[i]= "N0"+((i+1)*10)+" G90 X"+icoordx+" Y"+icoordy+" <br>";
+					asist=false;
+				}
+				else
+				{
+			stexto[i]= "N0"+((i+1)*10)+" X"+icoordx+" Y"+icoordy+" <br>";
+				}
+				}
+				}
+			stexto[i+1]="N0"+((i+2)*10)+" M30<br>%";
+			document.getElementById("clineas").innerHTML = stexto[i];
+			document.getElementById("clineas").innerHTML = stexto[i+1];
+			document.getElementById("clineas").innerHTML = stexto.join("");
+					i++;
+					ctx.lineTo(dx+coordy*fescalay,dy+coordx*fescalax);
+					ctx.lineWidth=1;
+					ctx.strokeStyle="cyan";
+					ctx.stroke();/***********************/
+				}
+				else
+				{
+			if(isist===true)/***********************/
 				{
 			stexto[i]= "N0"+((i+1)*10)+" G91 X"+coordx+" Y"+coordy+" <br>";
 					isist=false;
@@ -167,7 +201,8 @@
 					ctx.lineTo(dx+coordy*fescalay,dy+coordx*fescalax);
 					ctx.lineWidth=1;
 					ctx.strokeStyle="cyan";
-					ctx.stroke();
+					ctx.stroke();/***********************/
+				}
 		},				
       	});
 				function restablecer()
@@ -212,4 +247,5 @@
 			}
 	</script>
 </html>
+
 
