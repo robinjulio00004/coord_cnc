@@ -48,7 +48,9 @@
 	<a-image src="#img1" position="0 0.5 0" rotation="0 0 -90" width="3" height="2.3"></a-image>
 	<a-image src="#img2" position="0 0.5 0" rotation="0 0 -90" width="0.25" height="0.25"></a-image>
 	<a-entity gltf-model="#tool" position="0 0.5 0" rotation="180 0 0" scale="1.5 1.5 1.5" touch-move>
-	<a-image src="#img3" position="0 0 -1" rotation="0 0 -90" width="0.18" height="0.18" visible="false"></a-image>
+	<a-entity id="alerta" visible="false">
+	<a-image src="#img3" position="0 0 -1" rotation="0 0 -90" width="0.18" height="0.18"></a-image>
+	</a-entity>
 	</a-entity>
 		
 	<!-- Camera -->
@@ -228,11 +230,11 @@
 				eimg=!eimg;
 			if(eimg===true)
 			{
-				document.getElementById("img3").setAttribute('visible', true);
+				document.getElementById("alerta").setAttribute('visible', true);
 			}
 			else
 			{
-				document.getElementById("img3").setAttribute('visible', false);
+				document.getElementById("alerta").setAttribute('visible', false);
 			}
 			document.getElementById("button2").value="Hta ON";
 			setTimeout(()=>{document.getElementById("button2").value="Hta OFF";},1000);/*retardo de 1000ms*/
@@ -260,4 +262,5 @@
 			}
 	</script>
 </html>
+
 
