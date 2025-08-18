@@ -14,8 +14,9 @@ body{
       }
 .fmsg{
       position: absolute;
-      top: 5px;
+      top: 0px;
       left: 0px;
+	  padding:5px;
       width: 100%;
       height: 5em;
       display: flex;
