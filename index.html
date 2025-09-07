@@ -215,6 +215,7 @@
 				function restablecer()
 			{
 				ctx.reset();
+				ctx.clearRect(0,0,ctx.canvas.clientWidth,ctx.canvas.clientHeight);
 				ctx.beginPath();
 				ctx.moveTo(dx,dy);
 				etool = true;
