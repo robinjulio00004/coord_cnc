@@ -216,7 +216,10 @@
 			{
 				ctx.reset();
 				ctx.clearRect(0,0,ctx.canvas.clientWidth,ctx.canvas.clientHeight);
-				ctx.beginPath();
+				//canvas.height=window.innerHeight;
+				//canvas.width=window.innerWidth;
+				//ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+				//ctx.beginPath();
 				ctx.moveTo(dx,dy);
 				etool = true;
 				eimg=false;
@@ -266,3 +269,4 @@
 			}
 	</script>
 </html>
+
